@@ -466,6 +466,7 @@
     SUBDIR += wf-shell
     SUBDIR += windowtolayer
     SUBDIR += wl-clipboard
+    SUBDIR += wl-kbptr
     SUBDIR += wl-mirror
     SUBDIR += wlogout
     SUBDIR += wlopm
@@ -658,6 +659,7 @@
     SUBDIR += xvt
     SUBDIR += xwatchwin
     SUBDIR += xwayland-run
+    SUBDIR += xwayland-satellite
     SUBDIR += xwaylandvideobridge
     SUBDIR += xwd
     SUBDIR += xwininfo
