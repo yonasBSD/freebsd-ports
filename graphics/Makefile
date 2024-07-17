@@ -154,6 +154,7 @@
     SUBDIR += dspdfviewer
     SUBDIR += dssim
     SUBDIR += duhdraw
+    SUBDIR += durdraw
     SUBDIR += dust3d
     SUBDIR += dynamechs
     SUBDIR += ebsynth
@@ -161,7 +162,6 @@
     SUBDIR += egl-wayland
     SUBDIR += eglexternalplatform
     SUBDIR += elastix
-    SUBDIR += electricsheep
     SUBDIR += elementary-photos
     SUBDIR += embree
     SUBDIR += enblend
@@ -363,7 +363,6 @@
     SUBDIR += inkscape
     SUBDIR += inkscape-open-symbols
     SUBDIR += instant-meshes
-    SUBDIR += intel-backlight
     SUBDIR += intergif
     SUBDIR += ipe
     SUBDIR += jalbum
@@ -772,7 +771,6 @@
     SUBDIR += p5-VCG
     SUBDIR += p5-Visio
     SUBDIR += p5-feedgnuplot
-    SUBDIR += p5-ming
     SUBDIR += panoglview
     SUBDIR += panomatic
     SUBDIR += partio
@@ -867,6 +865,7 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-actdiag
+    SUBDIR += py-albucore
     SUBDIR += py-albumentations
     SUBDIR += py-altair
     SUBDIR += py-asciitree
@@ -885,6 +884,7 @@
     SUBDIR += py-colorz
     SUBDIR += py-colour
     SUBDIR += py-descartes
+    SUBDIR += py-diplib
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-djvulibre
     SUBDIR += py-exifread
@@ -924,7 +924,6 @@
     SUBDIR += py-mayavi
     SUBDIR += py-mcomix
     SUBDIR += py-mgwr
-    SUBDIR += py-ming
     SUBDIR += py-moderngl
     SUBDIR += py-moderngl-window
     SUBDIR += py-momepy
@@ -1087,6 +1086,7 @@
     SUBDIR += rubygem-imagesize
     SUBDIR += rubygem-invisible_captcha
     SUBDIR += rubygem-mini_magick
+    SUBDIR += rubygem-mini_magick4
     SUBDIR += rubygem-opengl
     SUBDIR += rubygem-pdfkit
     SUBDIR += rubygem-png
@@ -1152,6 +1152,7 @@
     SUBDIR += svg2png
     SUBDIR += svgalib
     SUBDIR += svgbob
+    SUBDIR += svgpp
     SUBDIR += swappy
     SUBDIR += swfmill
     SUBDIR += swftools
@@ -1213,7 +1214,6 @@
     SUBDIR += wayland-protocols
     SUBDIR += wayland-utils
     SUBDIR += waylandpp
-    SUBDIR += wdune
     SUBDIR += webp
     SUBDIR += webp-pixbuf-loader
     SUBDIR += wings

@@ -88,6 +88,7 @@
     SUBDIR += dijo
     SUBDIR += dive
     SUBDIR += dlib-models
+    SUBDIR += dlpack
     SUBDIR += dnetc
     SUBDIR += dotenv-linter
     SUBDIR += dtach
@@ -246,7 +247,6 @@
     SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lightgbm
-    SUBDIR += lingoteach
     SUBDIR += llama-cpp
     SUBDIR += locale-en_DK
     SUBDIR += localedata
@@ -411,7 +411,6 @@
     SUBDIR += py-ast-comments
     SUBDIR += py-boost-histogram
     SUBDIR += py-censys
-    SUBDIR += py-cinder
     SUBDIR += py-codecarbon
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
@@ -463,6 +462,7 @@
     SUBDIR += py-openpaperwork-core
     SUBDIR += py-openpaperwork-gtk
     SUBDIR += py-openvdb
+    SUBDIR += py-optuna
     SUBDIR += py-orange3-associate
     SUBDIR += py-orange3-datafusion
     SUBDIR += py-orange3-educational
@@ -543,6 +543,7 @@
     SUBDIR += ree
     SUBDIR += retry
     SUBDIR += rfc
+    SUBDIR += rgb-tui
     SUBDIR += ringtonetools
     SUBDIR += rname
     SUBDIR += rpl

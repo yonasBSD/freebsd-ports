@@ -1,5 +1,5 @@
 PORTNAME=	protobuf
-PORTVERSION=	4.27.0
+PORTVERSION=	4.27.2
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
