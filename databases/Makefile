@@ -480,6 +480,7 @@
     SUBDIR += p5-SQL-Maker
     SUBDIR += p5-SQL-NamedPlaceholder
     SUBDIR += p5-SQL-ReservedWords
+    SUBDIR += p5-SQL-SplitStatement
     SUBDIR += p5-SQL-Statement
     SUBDIR += p5-SQL-Translator
     SUBDIR += p5-SQLite-Work
@@ -840,6 +841,7 @@
     SUBDIR += py-varstack
     SUBDIR += py-whisper
     SUBDIR += py-xapian
+    SUBDIR += py-xrootd
     SUBDIR += py-zodbpickle
     SUBDIR += pythoncego
     SUBDIR += qdbm
