@@ -150,6 +150,7 @@
     SUBDIR += enchive
     SUBDIR += eschalot
     SUBDIR += expiretable
+    SUBDIR += exploit-pattern
     SUBDIR += fakeident
     SUBDIR += fakeroot
     SUBDIR += farmhash
@@ -824,6 +825,8 @@
     SUBDIR += php82-sodium
     SUBDIR += php83-filter
     SUBDIR += php83-sodium
+    SUBDIR += php84-filter
+    SUBDIR += php84-sodium
     SUBDIR += picocrypt
     SUBDIR += picosha2
     SUBDIR += pidgin-encryption
@@ -978,6 +981,7 @@
     SUBDIR += py-msoffcrypto-tool
     SUBDIR += py-muacrypt
     SUBDIR += py-netbox-secrets
+    SUBDIR += py-nethsm
     SUBDIR += py-netmiko
     SUBDIR += py-noiseprotocol
     SUBDIR += py-notus-scanner
@@ -1084,6 +1088,7 @@
     SUBDIR += py-zope.password
     SUBDIR += py-zxcvbn
     SUBDIR += pygost
+    SUBDIR += qt-sudo
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
@@ -1124,6 +1129,7 @@
     SUBDIR += rubygem-digest
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
+    SUBDIR += rubygem-doorkeeper-device_authorization_grant
     SUBDIR += rubygem-doorkeeper-openid_connect
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50

@@ -13,6 +13,7 @@ bin/llvm-cat-devel
 bin/llvm-cfi-verify-devel
 bin/llvm-config-devel
 bin/llvm-cov-devel
+bin/llvm-ctxprof-util-devel
 bin/llvm-cvtres-devel
 bin/llvm-cxxmap-devel
 %%CLANG%%bin/llvm-debuginfo-analyzer-devel
@@ -98,6 +99,7 @@ bin/sancov-devel
 %%EXTRAS%%bin/clang-include-fixer-devel
 %%EXTRAS%%bin/clang-installapi-devel
 %%EXTRAS%%bin/clang-move-devel
+%%EXTRAS%%bin/clang-nvlink-wrapper-devel
 %%EXTRAS%%bin/clang-pseudo-devel
 %%EXTRAS%%bin/clang-query-devel
 %%EXTRAS%%bin/clang-rename-devel
@@ -185,6 +187,7 @@ llvm-devel/bin/bugpoint
 %%EXTRAS%%llvm-devel/bin/clang-installapi
 %%CLANG%%llvm-devel/bin/clang-linker-wrapper
 %%EXTRAS%%llvm-devel/bin/clang-move
+%%EXTRAS%%llvm-devel/bin/clang-nvlink-wrapper
 %%CLANG%%llvm-devel/bin/clang-offload-bundler
 %%CLANG%%llvm-devel/bin/clang-offload-packager
 %%EXTRAS%%llvm-devel/bin/clang-pseudo
@@ -228,6 +231,7 @@ llvm-devel/bin/llvm-cat
 llvm-devel/bin/llvm-cfi-verify
 llvm-devel/bin/llvm-config
 llvm-devel/bin/llvm-cov
+llvm-devel/bin/llvm-ctxprof-util
 llvm-devel/bin/llvm-cvtres
 llvm-devel/bin/llvm-cxxdump
 llvm-devel/bin/llvm-cxxfilt
@@ -1062,6 +1066,7 @@ llvm-devel/bin/verify-uselistorder
 %%CLANG%%llvm-devel/include/clang/Basic/FileManager.h
 %%CLANG%%llvm-devel/include/clang/Basic/FileSystemOptions.h
 %%CLANG%%llvm-devel/include/clang/Basic/FileSystemStatCache.h
+%%CLANG%%llvm-devel/include/clang/Basic/HLSLIntangibleTypes.def
 %%CLANG%%llvm-devel/include/clang/Basic/HLSLRuntime.h
 %%CLANG%%llvm-devel/include/clang/Basic/HeaderInclude.h
 %%CLANG%%llvm-devel/include/clang/Basic/IdentifierTable.h
@@ -1164,7 +1169,7 @@ llvm-devel/bin/verify-uselistorder
 %%CLANG%%llvm-devel/include/clang/CodeGen/ConstantInitBuilder.h
 %%CLANG%%llvm-devel/include/clang/CodeGen/ConstantInitFuture.h
 %%CLANG%%llvm-devel/include/clang/CodeGen/ModuleBuilder.h
-%%CLANG%%llvm-devel/include/clang/CodeGen/ObjectFilePCHContainerOperations.h
+%%CLANG%%llvm-devel/include/clang/CodeGen/ObjectFilePCHContainerWriter.h
 %%CLANG%%llvm-devel/include/clang/CodeGen/SwiftCallingConv.h
 %%CLANG%%llvm-devel/include/clang/Config/config.h
 %%CLANG%%llvm-devel/include/clang/CrossTU/CrossTUDiagnostic.h
@@ -1389,6 +1394,7 @@ llvm-devel/bin/verify-uselistorder
 %%CLANG%%llvm-devel/include/clang/Serialization/ModuleFile.h
 %%CLANG%%llvm-devel/include/clang/Serialization/ModuleFileExtension.h
 %%CLANG%%llvm-devel/include/clang/Serialization/ModuleManager.h
+%%CLANG%%llvm-devel/include/clang/Serialization/ObjectFilePCHContainerReader.h
 %%CLANG%%llvm-devel/include/clang/Serialization/PCHContainerOperations.h
 %%CLANG%%llvm-devel/include/clang/Serialization/SerializationDiagnostic.h
 %%CLANG%%llvm-devel/include/clang/Serialization/SourceLocationEncoding.h
@@ -1788,7 +1794,9 @@ llvm-devel/bin/verify-uselistorder
 %%FLANG%%llvm-devel/include/flang/Parser/tools.h
 %%FLANG%%llvm-devel/include/flang/Parser/unparse.h
 %%FLANG%%llvm-devel/include/flang/Parser/user-state.h
+%%FLANG%%llvm-devel/include/flang/Runtime/CUDA/allocator.h
 %%FLANG%%llvm-devel/include/flang/Runtime/allocatable.h
+%%FLANG%%llvm-devel/include/flang/Runtime/allocator-registry.h
 %%FLANG%%llvm-devel/include/flang/Runtime/array-constructor.h
 %%FLANG%%llvm-devel/include/flang/Runtime/assign.h
 %%FLANG%%llvm-devel/include/flang/Runtime/c-or-cpp.h
@@ -1852,6 +1860,7 @@ llvm-devel/bin/verify-uselistorder
 %%FLANG%%llvm-devel/include/flang/ieee_features.mod
 %%FLANG%%llvm-devel/include/flang/iso_c_binding.mod
 %%FLANG%%llvm-devel/include/flang/iso_fortran_env.mod
+%%FLANG%%llvm-devel/include/flang/iso_fortran_env_impl.mod
 %%FLANG%%llvm-devel/include/flang/mma.mod
 %%FLANG%%%%OPENMP%%llvm-devel/include/flang/omp_lib.f18.mod
 %%FLANG%%%%OPENMP%%llvm-devel/include/flang/omp_lib.mod
@@ -1920,6 +1929,7 @@ llvm-devel/bin/verify-uselistorder
 %%LLDB%%llvm-devel/include/lldb/API/SBQueue.h
 %%LLDB%%llvm-devel/include/lldb/API/SBQueueItem.h
 %%LLDB%%llvm-devel/include/lldb/API/SBReproducer.h
+%%LLDB%%llvm-devel/include/lldb/API/SBSaveCoreOptions.h
 %%LLDB%%llvm-devel/include/lldb/API/SBScriptObject.h
 %%LLDB%%llvm-devel/include/lldb/API/SBSection.h
 %%LLDB%%llvm-devel/include/lldb/API/SBSourceManager.h
@@ -2171,6 +2181,7 @@ llvm-devel/bin/verify-uselistorder
 %%LLDB%%llvm-devel/include/lldb/Interpreter/CommandReturnObject.h
 %%LLDB%%llvm-devel/include/lldb/Interpreter/Interfaces/OperatingSystemInterface.h
 %%LLDB%%llvm-devel/include/lldb/Interpreter/Interfaces/ScriptedInterface.h
+%%LLDB%%llvm-devel/include/lldb/Interpreter/Interfaces/ScriptedInterfaceUsages.h
 %%LLDB%%llvm-devel/include/lldb/Interpreter/Interfaces/ScriptedPlatformInterface.h
 %%LLDB%%llvm-devel/include/lldb/Interpreter/Interfaces/ScriptedProcessInterface.h
 %%LLDB%%llvm-devel/include/lldb/Interpreter/Interfaces/ScriptedThreadInterface.h
@@ -2235,6 +2246,7 @@ llvm-devel/bin/verify-uselistorder
 %%LLDB%%llvm-devel/include/lldb/Symbol/ObjectContainer.h
 %%LLDB%%llvm-devel/include/lldb/Symbol/ObjectFile.h
 %%LLDB%%llvm-devel/include/lldb/Symbol/PostfixExpression.h
+%%LLDB%%llvm-devel/include/lldb/Symbol/SaveCoreOptions.h
 %%LLDB%%llvm-devel/include/lldb/Symbol/SourceModule.h
 %%LLDB%%llvm-devel/include/lldb/Symbol/Symbol.h
 %%LLDB%%llvm-devel/include/lldb/Symbol/SymbolContext.h
@@ -2291,6 +2303,7 @@ llvm-devel/bin/verify-uselistorder
 %%LLDB%%llvm-devel/include/lldb/Target/RegisterTypeBuilder.h
 %%LLDB%%llvm-devel/include/lldb/Target/RemoteAwarePlatform.h
 %%LLDB%%llvm-devel/include/lldb/Target/Runtime.h
+%%LLDB%%llvm-devel/include/lldb/Target/ScriptedThreadPlan.h
 %%LLDB%%llvm-devel/include/lldb/Target/SectionLoadHistory.h
 %%LLDB%%llvm-devel/include/lldb/Target/SectionLoadList.h
 %%LLDB%%llvm-devel/include/lldb/Target/StackFrame.h
@@ -2312,7 +2325,6 @@ llvm-devel/bin/verify-uselistorder
 %%LLDB%%llvm-devel/include/lldb/Target/ThreadPlanCallFunctionUsingABI.h
 %%LLDB%%llvm-devel/include/lldb/Target/ThreadPlanCallOnFunctionExit.h
 %%LLDB%%llvm-devel/include/lldb/Target/ThreadPlanCallUserExpression.h
-%%LLDB%%llvm-devel/include/lldb/Target/ThreadPlanPython.h
 %%LLDB%%llvm-devel/include/lldb/Target/ThreadPlanRunToAddress.h
 %%LLDB%%llvm-devel/include/lldb/Target/ThreadPlanShouldStopHere.h
 %%LLDB%%llvm-devel/include/lldb/Target/ThreadPlanStack.h
@@ -2578,6 +2590,7 @@ llvm-devel/include/llvm/Analysis/CycleAnalysis.h
 llvm-devel/include/llvm/Analysis/DDG.h
 llvm-devel/include/llvm/Analysis/DDGPrinter.h
 llvm-devel/include/llvm/Analysis/DOTGraphTraitsPass.h
+llvm-devel/include/llvm/Analysis/DXILResource.h
 llvm-devel/include/llvm/Analysis/Delinearization.h
 llvm-devel/include/llvm/Analysis/DemandedBits.h
 llvm-devel/include/llvm/Analysis/DependenceAnalysis.h
@@ -4112,6 +4125,7 @@ llvm-devel/include/llvm/TargetParser/Host.h
 llvm-devel/include/llvm/TargetParser/LoongArchTargetParser.def
 llvm-devel/include/llvm/TargetParser/LoongArchTargetParser.h
 llvm-devel/include/llvm/TargetParser/PPCTargetParser.def
+llvm-devel/include/llvm/TargetParser/PPCTargetParser.h
 llvm-devel/include/llvm/TargetParser/RISCVISAInfo.h
 llvm-devel/include/llvm/TargetParser/RISCVTargetParser.h
 llvm-devel/include/llvm/TargetParser/RISCVTargetParserDef.inc
@@ -4324,7 +4338,6 @@ llvm-devel/include/llvm/Transforms/Utils/CodeLayout.h
 llvm-devel/include/llvm/Transforms/Utils/CodeMoverUtils.h
 llvm-devel/include/llvm/Transforms/Utils/CountVisits.h
 llvm-devel/include/llvm/Transforms/Utils/CtorUtils.h
-llvm-devel/include/llvm/Transforms/Utils/DXILResource.h
 llvm-devel/include/llvm/Transforms/Utils/DXILUpgrade.h
 llvm-devel/include/llvm/Transforms/Utils/Debugify.h
 llvm-devel/include/llvm/Transforms/Utils/EntryExitInstrumenter.h
@@ -5268,6 +5281,9 @@ llvm-devel/include/llvm/XRay/YAMLXRayRecord.h
 %%MLIR%%llvm-devel/include/mlir/Dialect/OpenACC/OpenACCOpsDialect.h.inc
 %%MLIR%%llvm-devel/include/mlir/Dialect/OpenACC/OpenACCOpsEnums.cpp.inc
 %%MLIR%%llvm-devel/include/mlir/Dialect/OpenACC/OpenACCOpsEnums.h.inc
+%%MLIR%%llvm-devel/include/mlir/Dialect/OpenACC/OpenACCOpsInterfaces.cpp.inc
+%%MLIR%%llvm-devel/include/mlir/Dialect/OpenACC/OpenACCOpsInterfaces.h.inc
+%%MLIR%%llvm-devel/include/mlir/Dialect/OpenACC/OpenACCOpsInterfaces.td
 %%MLIR%%llvm-devel/include/mlir/Dialect/OpenACC/OpenACCOpsTypes.cpp.inc
 %%MLIR%%llvm-devel/include/mlir/Dialect/OpenACC/OpenACCOpsTypes.h.inc
 %%MLIR%%llvm-devel/include/mlir/Dialect/OpenACC/OpenACCOpsTypes.td
@@ -6239,6 +6255,10 @@ llvm-devel/include/llvm/XRay/YAMLXRayRecord.h
 %%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/arm_sve.h
 %%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/arm_vector_types.h
 %%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/armintr.h
+%%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/avx10_2_512minmaxintrin.h
+%%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/avx10_2_512niintrin.h
+%%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/avx10_2minmaxintrin.h
+%%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/avx10_2niintrin.h
 %%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/avx2intrin.h
 %%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/avx512bf16intrin.h
 %%CLANG%%llvm-devel/lib/clang/%%LLVM_MAJOR%%/include/avx512bitalgintrin.h
@@ -6473,7 +6493,6 @@ llvm-devel/lib/cmake/llvm/HandleLLVMOptions.cmake
 llvm-devel/lib/cmake/llvm/HandleLLVMStdlib.cmake
 llvm-devel/lib/cmake/llvm/LLVM-Build.cmake
 llvm-devel/lib/cmake/llvm/LLVM-Config.cmake
-llvm-devel/lib/cmake/llvm/LLVMCheckLinkerFlag.cmake
 llvm-devel/lib/cmake/llvm/LLVMConfig.cmake
 llvm-devel/lib/cmake/llvm/LLVMConfigExtensions.cmake
 llvm-devel/lib/cmake/llvm/LLVMConfigVersion.cmake
@@ -6498,8 +6517,8 @@ llvm-devel/lib/cmake/llvm/llvm-driver-template.cpp.in
 %%POLLY%%llvm-devel/lib/cmake/polly/PollyConfig.cmake
 %%POLLY%%llvm-devel/lib/cmake/polly/PollyConfigVersion.cmake
 %%POLLY%%llvm-devel/lib/cmake/polly/PollyExports-all.cmake
-%%STATIC_LIBS%%llvm-devel/lib/libCUFAttrs.a
-%%STATIC_LIBS%%llvm-devel/lib/libCUFDialect.a
+%%STATIC_LIBS%%%%FLANG%%llvm-devel/lib/libCUFAttrs.a
+%%STATIC_LIBS%%%%FLANG%%llvm-devel/lib/libCUFDialect.a
 %%STATIC_LIBS%%%%FLANG%%llvm-devel/lib/libFIRAnalysis.a
 %%STATIC_LIBS%%%%FLANG%%llvm-devel/lib/libFIRBuilder.a
 %%STATIC_LIBS%%%%FLANG%%llvm-devel/lib/libFIRCodeGen.a

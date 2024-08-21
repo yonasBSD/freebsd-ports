@@ -29,6 +29,7 @@
     SUBDIR += aimage
     SUBDIR += aird
     SUBDIR += alfio
+    SUBDIR += alloy
     SUBDIR += am-utils
     SUBDIR += amazon-ssm-agent
     SUBDIR += amazon-ssm-plugin
@@ -129,7 +130,6 @@
     SUBDIR += battray
     SUBDIR += bchunk
     SUBDIR += beadm
-    SUBDIR += beadm-devel
     SUBDIR += beats7
     SUBDIR += beats8
     SUBDIR += bfs
@@ -199,9 +199,11 @@
     SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine-masterfiles322
     SUBDIR += cfengine-masterfiles323
+    SUBDIR += cfengine-masterfiles324
     SUBDIR += cfengine321
     SUBDIR += cfengine322
     SUBDIR += cfengine323
+    SUBDIR += cfengine324
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -426,6 +428,7 @@
     SUBDIR += foremost
     SUBDIR += fortunelock
     SUBDIR += fpart
+    SUBDIR += framework-system
     SUBDIR += frand
     SUBDIR += freebsd-bsdlabel
     SUBDIR += freebsd-fdisk
@@ -1016,6 +1019,8 @@
     SUBDIR += php82-posix
     SUBDIR += php83-fileinfo
     SUBDIR += php83-posix
+    SUBDIR += php84-fileinfo
+    SUBDIR += php84-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -1145,6 +1150,7 @@
     SUBDIR += py-ptyprocess
     SUBDIR += py-puremagic
     SUBDIR += py-py-cpuinfo
+    SUBDIR += py-pyinfra
     SUBDIR += py-python-bareos
     SUBDIR += py-python-consul
     SUBDIR += py-python-consul2
@@ -1179,6 +1185,7 @@
     SUBDIR += qjail
     SUBDIR += qjail54
     SUBDIR += qlogtools
+    SUBDIR += qmk_hid
     SUBDIR += qsudo
     SUBDIR += qt5-qtdiag
     SUBDIR += qt5-qtpaths
@@ -1569,7 +1576,6 @@
     SUBDIR += uhidd
     SUBDIR += uif2iso
     SUBDIR += unetbootin
-    SUBDIR += unieject
     SUBDIR += uniutils
     SUBDIR += unquote
     SUBDIR += unstow

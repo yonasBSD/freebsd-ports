@@ -7,7 +7,7 @@
 # make USE_PACKAGE_DEPENDS_ONLY=yes install clean
 
 PORTNAME=	obsidian
-PORTVERSION=	1.6.5
+PORTVERSION=	1.6.7
 PORTREVISION=	1
 CATEGORIES=	textproc
 # Icon is taken from the Nix build recipe

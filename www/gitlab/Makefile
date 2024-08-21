@@ -1,10 +1,9 @@
 PORTNAME=	gitlab-${FLAVOR:Uce}
-PORTVERSION=	17.1.2
+PORTVERSION=	17.1.4
 DISTVERSIONPREFIX=	v
 .if ${FLAVOR:U} == ee
 DISTVERSIONSUFFIX=	-ee
 .endif
-PORTREVISION=	2
 CATEGORIES=	www devel
 
 # include patch to fix database migration
@@ -151,6 +150,7 @@ MY_DEPENDS=	git>=2.41.0:devel/git \
 	rubygem-asciidoctor-kroki>=0.8.0<0.9:textproc/rubygem-asciidoctor-kroki \
 	rubygem-rouge42>=4.2.0<4.3:textproc/rubygem-rouge42 \
 	rubygem-truncato>=0.7.12<0.8.0:textproc/rubygem-truncato \
+	rubygem-tty-prompt>=0.23<1:devel/rubygem-tty-prompt \
 	rubygem-nokogiri>=1.16<2:textproc/rubygem-nokogiri \
 	rubygem-gitlab-glfm-markdown>=0.0.17<0.1:textproc/rubygem-gitlab-glfm-markdown \
 	rubygem-icalendar>=0:devel/rubygem-icalendar \
@@ -212,7 +212,7 @@ MY_DEPENDS=	git>=2.41.0:devel/git \
 	rubygem-gitlab-labkit>=0.36.0<0.37:devel/rubygem-gitlab-labkit \
 	rubygem-thrift>=0.16.0:devel/rubygem-thrift \
 	rubygem-rails-i18n-rails70>=7.0.9<8:devel/rubygem-rails-i18n-rails70 \
-	rubygem-gettext_i18n_rails>=1.12.0<1.13:devel/rubygem-gettext_i18n_rails \
+	rubygem-gettext_i18n_rails112>=1.12.0<1.13:devel/rubygem-gettext_i18n_rails112 \
 	rubygem-gettext>=3.4<4:devel/rubygem-gettext \
 	rubygem-batch-loader>=2.0.5<2.1:devel/rubygem-batch-loader \
 	rubygem-peek-rails70>=1.1<2.0:devel/rubygem-peek-rails70 \
@@ -264,7 +264,7 @@ MY_DEPENDS=	git>=2.41.0:devel/git \
 	rubygem-gitaly>=17.0.1:net/rubygem-gitaly \
 	rubygem-kas-grpc>=0.5.0,1<0.6.0,1:net/rubygem-kas-grpc \
 	rubygem-grpc>=1.63.0<2:net/rubygem-grpc \
-	rubygem-google-protobuf>=3.25.3<4:devel/rubygem-google-protobuf \
+	rubygem-google-protobuf3>=3.25.3<4:devel/rubygem-google-protobuf3 \
 	rubygem-toml-rb>=2.2.0<3:www/rubygem-toml-rb \
 	rubygem-flipper026>=0.26.2<0.27:devel/rubygem-flipper026 \
 	rubygem-flipper-active_record-rails70>=0.26.2<0.27:databases/rubygem-flipper-active_record-rails70 \
@@ -479,6 +479,7 @@ post-install:
 	@${ECHO_CMD} "@dir(,,700) ${WWWDIR_REL}/shared/artifacts/tmp/uploads" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(,,700) ${WWWDIR_REL}/shared/artifacts/tmp/work" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(,,700) ${WWWDIR_REL}/shared/ci_secure_files" >> ${TMPPLIST}
+	# TODO: Maybe we need to add here a new dir: ${WWWDIR_REL}/shared/external-diffs
 	@${ECHO_CMD} "@dir(,,770) ${WWWDIR_REL}/shared/packages" >> ${TMPPLIST}
 	@${ECHO_CMD} "@group gitlab-pages" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(,,770) ${WWWDIR_REL}/shared/pages" >> ${TMPPLIST}

@@ -116,6 +116,7 @@
     SUBDIR += ipaudit
     SUBDIR += ipcad
     SUBDIR += ipcalc
+    SUBDIR += ipfixcol2
     SUBDIR += iprange
     SUBDIR += ipv6calc
     SUBDIR += ipv6gen
@@ -127,6 +128,7 @@
     SUBDIR += kismet
     SUBDIR += klg
     SUBDIR += lg
+    SUBDIR += libfds
     SUBDIR += librenms
     SUBDIR += libsmi
     SUBDIR += lldpd
@@ -295,6 +297,7 @@
     SUBDIR += php81-snmp
     SUBDIR += php82-snmp
     SUBDIR += php83-snmp
+    SUBDIR += php84-snmp
     SUBDIR += phpfpm_exporter
     SUBDIR += phpipam
     SUBDIR += ping_exporter
