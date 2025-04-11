@@ -64,7 +64,7 @@ GHOSTSCRIPT_DEFAULT?=	10
 # Possible values: mesa-libs, mesa-devel
 GL_DEFAULT?=		mesa-libs
 # Possible values: 1.20, 1.21, 1.22, 1.23, 1.24, 1.25-devel
-GO_DEFAULT?=		1.21
+GO_DEFAULT?=		1.24
 # Possible values: 1.8, 2.2, 3.0
 GUILE_DEFAULT?=		2.2
 # Possible versions: 6, 7
@@ -147,7 +147,7 @@ PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.1, 3.2, 3.3
 RUBY_DEFAULT?=		3.2
 # Possible values: rust, rust-nightly
-RUST_DEFAULT?=		rust
+RUST_DEFAULT?=		rust-nightly
 # Possible values: 4.16, 4.19, 4.20
 SAMBA_DEFAULT?=		4.16
 # When updating this, please also update the same list in ssl.mk and the checks
