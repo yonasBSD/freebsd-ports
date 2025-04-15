@@ -345,6 +345,7 @@
     SUBDIR += buf
     SUBDIR += bugzilla44
     SUBDIR += bugzilla50
+    SUBDIR += bugzilla52
     SUBDIR += build
     SUBDIR += build2
     SUBDIR += buildkite-agent
@@ -370,6 +371,7 @@
     SUBDIR += cargo-cache
     SUBDIR += cargo-deny
     SUBDIR += cargo-depgraph
+    SUBDIR += cargo-dist
     SUBDIR += cargo-edit
     SUBDIR += cargo-generate
     SUBDIR += cargo-hack
