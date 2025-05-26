@@ -308,8 +308,8 @@ elog:*:364:
 gotify:*:365:
 opengist:*:366:
 velbustcpd:*:367:
-# free: 368
-# free: 369
+sshesame:*:368:
+neo4j:*:369:
 _wsdd:*:370:
 # free: 371
 # free: 372
@@ -470,7 +470,7 @@ dkimproxy:*:525:
 # free: 527
 # free: 528
 # free: 529
-# free: 530
+_bgplgd:*:530:
 # free: 531
 # free: 532
 # free: 533
@@ -802,9 +802,9 @@ opensearch:*:855:
 # free: 858
 # free: 859
 plocate:*:860:
-# free: 861
-# free: 862
-# free: 863
+rekor:*:861:
+timestamp-authority:*:862:
+trillian:*:863:
 mediamtx:*:864:
 z2m:*:865:
 vglusers:*:866:
