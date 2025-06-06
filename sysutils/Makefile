@@ -552,6 +552,7 @@
     SUBDIR += jail_exporter
     SUBDIR += jailadmin
     SUBDIR += jaildaemon
+    SUBDIR += jailmanager
     SUBDIR += jailme
     SUBDIR += jailrc
     SUBDIR += jailutils
@@ -1073,11 +1074,6 @@
     SUBDIR += py-tarsnapper
     SUBDIR += py-tldr
     SUBDIR += py-tmuxp
-    SUBDIR += py-upt
-    SUBDIR += py-upt-cpan
-    SUBDIR += py-upt-freebsd
-    SUBDIR += py-upt-pypi
-    SUBDIR += py-upt-rubygems
     SUBDIR += py-uptime
     SUBDIR += qchroot
     SUBDIR += qdirstat
@@ -1124,6 +1120,7 @@
     SUBDIR += rhc
     SUBDIR += rinse
     SUBDIR += rkbin
+    SUBDIR += rldd
     SUBDIR += rmlint
     SUBDIR += rocinante
     SUBDIR += rocr
@@ -1263,7 +1260,6 @@
     SUBDIR += schilyutils
     SUBDIR += screen
     SUBDIR += screen-devel
-    SUBDIR += screen49
     SUBDIR += screen50
     SUBDIR += screenfetch
     SUBDIR += screenie

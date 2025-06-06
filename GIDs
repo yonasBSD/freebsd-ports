@@ -322,7 +322,7 @@ walletd:*:378:
 renterd:*:379:
 spoofdpi:*:380:
 hydroxide:*:381:
-# free: 382
+_tlsrpt:*:382:
 # free: 383
 # free: 384
 # free: 385
@@ -800,7 +800,7 @@ opensearch:*:855:
 # free: 856
 # free: 857
 # free: 858
-# free: 859
+kanidm:*:859:
 plocate:*:860:
 rekor:*:861:
 timestamp-authority:*:862:
