@@ -147,7 +147,7 @@ PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.2, 3.3, 3.4, 4.0
 RUBY_DEFAULT?=		3.3
 # Possible values: rust, rust-nightly
-RUST_DEFAULT?=		rust
+RUST_DEFAULT?=		rust-nightly
 # Possible values: 4.16, 4.19, 4.20, 4.22, 4.23
 SAMBA_DEFAULT?=		4.16
 # When updating this, please also update the same list in ssl.mk and the checks

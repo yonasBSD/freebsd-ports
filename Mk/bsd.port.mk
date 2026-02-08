@@ -2571,7 +2571,7 @@ check-categories:
 	@${FALSE}
 .    else
 
-VALID_CATEGORIES+= accessibility afterstep arabic archivers astro audio \
+VALID_CATEGORIES+= yonasbsd accessibility afterstep arabic archivers astro audio \
 	benchmarks biology budgie cad chinese comms converters \
 	databases deskutils devel dns docs \
 	editors education elisp emulators enlightenment \
