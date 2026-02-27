@@ -375,6 +375,7 @@
     SUBDIR += lua-resty-session3
     SUBDIR += luakit
     SUBDIR += luakit-devel
+    SUBDIR += lubelogger
     SUBDIR += lux
     SUBDIR += lychee
     SUBDIR += lycheeorg
