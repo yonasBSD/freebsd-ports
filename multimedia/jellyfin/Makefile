@@ -1,5 +1,5 @@
 PORTNAME=	jellyfin
-DISTVERSION=	10.11.6
+DISTVERSION=	10.11.7
 CATEGORIES=	multimedia
 EXTRACT_ONLY+=	${PORTNAME}-${PORTNAME}-${GH_TAGNAME}_GH0.tar.gz \
 		${PORTNAME}-${PORTNAME}-web-${GH_TAGNAME}_GH0.tar.gz
@@ -56,6 +56,8 @@ DOTNET_RUNTIME=		${OPSYS:tl}.${OSREL:R}-${ARCH:S|amd64|x64|:C|aarch64|arm64|}
 
 # Always list both arch tarballs in DISTFILES so make makesum checksums both.
 # Only extract the one matching the current ARCH.
+# files/packagejsons/ are copies of upstream with optionalDependencies removed
+# (sass-embedded pulls native binaries unavailable on FreeBSD).
 FILE_AMD64=		${PORTNAME}-${DISTVERSION}-node${NODEJS_VERSION}-amd64-modules.tar.gz
 FILE_ARM64=		${PORTNAME}-${DISTVERSION}-node${NODEJS_VERSION}-arm64-modules.tar.gz
 DISTFILES+=		${FILE_AMD64}:prefetch ${FILE_ARM64}:prefetch
