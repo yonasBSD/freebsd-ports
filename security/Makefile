@@ -969,6 +969,7 @@
     SUBDIR += py-hkdf
     SUBDIR += py-htpasswd
     SUBDIR += py-httpx-auth
+    SUBDIR += py-iamdata
     SUBDIR += py-iris-check-module
     SUBDIR += py-iris-client
     SUBDIR += py-iris-evtx-module
