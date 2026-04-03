@@ -1023,6 +1023,7 @@
     SUBDIR += py-plaso
     SUBDIR += py-pnu-certwatch
     SUBDIR += py-pnu-vuxml
+    SUBDIR += py-policyuniverse
     SUBDIR += py-potr
     SUBDIR += py-pwntools
     SUBDIR += py-pyaes
