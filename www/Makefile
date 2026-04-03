@@ -1525,6 +1525,7 @@
     SUBDIR += py-channels-redis
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
+    SUBDIR += py-cherrypy-cors
     SUBDIR += py-cinemagoer
     SUBDIR += py-cross-web
     SUBDIR += py-crossplane
