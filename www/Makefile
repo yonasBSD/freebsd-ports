@@ -385,6 +385,7 @@
     SUBDIR += matomo
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
+    SUBDIR += mcp-server-browserbase
     SUBDIR += mediawiki143
     SUBDIR += mediawiki144
     SUBDIR += mediawiki145
