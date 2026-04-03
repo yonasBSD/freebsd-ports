@@ -1079,6 +1079,7 @@
     SUBDIR += py-serpico
     SUBDIR += py-service-identity
     SUBDIR += py-shamir-mnemonic
+    SUBDIR += py-shodan
     SUBDIR += py-signedjson
     SUBDIR += py-signxml
     SUBDIR += py-slip10
