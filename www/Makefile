@@ -1779,6 +1779,7 @@
     SUBDIR += py-google-cloud-bigquery-storage
     SUBDIR += py-google-cloud-bigtable
     SUBDIR += py-google-cloud-compute
+    SUBDIR += py-google-cloud-container
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-datastore
     SUBDIR += py-google-cloud-dlp
