@@ -482,6 +482,7 @@
     SUBDIR += ldmud
     SUBDIR += leela-zero
     SUBDIR += legend-of-edgar
+    SUBDIR += legendary
     SUBDIR += legesmotus
     SUBDIR += lexter
     SUBDIR += lgeneral
