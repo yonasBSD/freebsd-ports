@@ -8639,6 +8639,7 @@
     SUBDIR += vc
     SUBDIR += vc-intrinsics
     SUBDIR += vcglib
+    SUBDIR += vdf
     SUBDIR += venom
     SUBDIR += vera++
     SUBDIR += vexcl
