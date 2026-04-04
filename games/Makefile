@@ -851,6 +851,7 @@
     SUBDIR += qwfwd
     SUBDIR += r1q2
     SUBDIR += railroad-rampage
+    SUBDIR += rare
     SUBDIR += rawgl
     SUBDIR += re3
     SUBDIR += redeclipse
