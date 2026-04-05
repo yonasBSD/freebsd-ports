@@ -12,18 +12,20 @@ WWW=		https://navi2ch.sourceforge.net
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-RUN_DEPENDS=	${LOCALBASE}/sbin/2chproxy.pl:japanese/p5-2chproxy
+RUN_DEPENDS=	proxy2ch:japanese/proxy2ch
 
 USES=		emacs
 USE_GITHUB=	yes
 GH_ACCOUNT=	naota
-GH_TAGNAME=	faebfd1
+GH_TAGNAME=	7811dba
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	EMACS="${EMACS_CMD}"
 CONFIGURE_ARGS=	--with-lispdir=${PREFIX}/${LISPDIR}/${PORTNAME}
 PLIST_SUB=	LISPDIR=${LISPDIR}
 PORTDOCS=	${PORTDOC_FILES} contrib
+
+NO_ARCH=	yes
 
 INFO=		navi2ch
 
