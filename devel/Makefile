@@ -301,6 +301,7 @@
     SUBDIR += bazel5
     SUBDIR += bazel7
     SUBDIR += bazel8
+    SUBDIR += bazel9
     SUBDIR += bbparse
     SUBDIR += bcc
     SUBDIR += bcpp
