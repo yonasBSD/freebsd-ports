@@ -1,5 +1,5 @@
 bin/jj
-etc/bash_completion.d/jujutsu
+etc/bash_completion.d/jj
 %%PORTDOCS%%%%DOCSDIR%%/FAQ.md
 %%PORTDOCS%%%%DOCSDIR%%/bookmarks.md
 %%PORTDOCS%%%%DOCSDIR%%/changelog.md
@@ -80,7 +80,6 @@ etc/bash_completion.d/jujutsu
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/setup_standard_config.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/working_copy.png
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/working_copy.svg
-share/fish/completions/jujutsu.fish
 share/man/man1/jj-abandon.1.gz
 share/man/man1/jj-absorb.1.gz
 share/man/man1/jj-arrange.1.gz
@@ -196,4 +195,4 @@ share/man/man1/jj-workspace-root.1.gz
 share/man/man1/jj-workspace-update-stale.1.gz
 share/man/man1/jj-workspace.1.gz
 share/man/man1/jj.1.gz
-share/zsh/site-functions/_jujutsu
+share/zsh/site-functions/_jj
