@@ -1,6 +1,5 @@
 PORTNAME=	tiledb
-PORTVERSION=	2.30.0
-PORTREVISION=	2
+PORTVERSION=	2.30.1
 CATEGORIES=	databases
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -11,7 +10,7 @@ WWW=		https://tiledb.com/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	capnproto1>=1.2.0<1.2.0_99:devel/capnproto1 \
+BUILD_DEPENDS=	capnproto1>=1.3.0<1.3.0_99:devel/capnproto1 \
 		clipp>=0:devel/clipp \
 		nlohmann-json>=0:devel/nlohmann-json
 LIB_DEPENDS=	libblosc2.so:archivers/c-blosc2 \
