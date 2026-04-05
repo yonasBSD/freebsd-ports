@@ -240,8 +240,8 @@
     SUBDIR += arm-none-eabi-newlib
     SUBDIR += aros-sdk
     SUBDIR += art
-    SUBDIR += asfml
     SUBDIR += asdf
+    SUBDIR += asfml
     SUBDIR += asl
     SUBDIR += asmjit
     SUBDIR += asmx
@@ -968,8 +968,8 @@
     SUBDIR += gstreamer1-devtools
     SUBDIR += gstreamer1-plugins-soup
     SUBDIR += gtgt
-    SUBDIR += gtranslator
     SUBDIR += gtkspellmm
+    SUBDIR += gtranslator
     SUBDIR += guichan
     SUBDIR += guile-lib
     SUBDIR += gum

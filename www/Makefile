@@ -2742,8 +2742,8 @@
     SUBDIR += yuicompressor
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
-    SUBDIR += zine-ssg
     SUBDIR += zgrab2
+    SUBDIR += zine-ssg
     SUBDIR += zola
     SUBDIR += zoraxy
 
