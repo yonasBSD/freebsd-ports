@@ -4813,6 +4813,7 @@
     SUBDIR += py-dask
     SUBDIR += py-dask-awkward
     SUBDIR += py-dask-expr
+    SUBDIR += py-dask-geopandas
     SUBDIR += py-dask-histogram
     SUBDIR += py-dataclass-array
     SUBDIR += py-dataclasses-json
