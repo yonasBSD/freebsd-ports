@@ -1,10 +1,11 @@
-PORTNAME=	babi_grammars
+PORTNAME=	babi-grammars
 DISTVERSION=	0.0.66
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	babi_grammars-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Grammars for the babi text editor
 WWW=		https://github.com/asottile/babi-grammars
 

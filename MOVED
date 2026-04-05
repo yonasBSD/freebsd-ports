@@ -5227,3 +5227,4 @@ x11-toolkits/scintilla||2026-04-01|Has expired: No consumers left in the tree, t
 security/py-shodan|net/py-shodan|2026-04-03|Remove duplicate port. Use net/py-shodan instead
 devel/py-jsonschema-spec|devel/py-jsonschema-path|2026-04-05|Remove obsoleted port. Use devel/py-jsonschema-path instead
 devel/py-libcst03|devel/py-libcst|2026-04-05|Remove obsoleted port. Use devel/py-libcst instead
+devel/py-babi_grammars|devel/py-babi-grammars|2026-04-05|Rename to match upstream naming
