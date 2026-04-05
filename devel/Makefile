@@ -364,7 +364,7 @@
     SUBDIR += caliper
     SUBDIR += camp
     SUBDIR += capnproto
-    SUBDIR += capnproto1
+    SUBDIR += capnproto-tiledb
     SUBDIR += capslock
     SUBDIR += capstone
     SUBDIR += capstone4

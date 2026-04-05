@@ -5228,3 +5228,4 @@ security/py-shodan|net/py-shodan|2026-04-03|Remove duplicate port. Use net/py-sh
 devel/py-jsonschema-spec|devel/py-jsonschema-path|2026-04-05|Remove obsoleted port. Use devel/py-jsonschema-path instead
 devel/py-libcst03|devel/py-libcst|2026-04-05|Remove obsoleted port. Use devel/py-libcst instead
 devel/py-babi_grammars|devel/py-babi-grammars|2026-04-05|Rename to match upstream naming
+devel/capnproto1|devel/capnproto-tiledb|2026-04-05|Rename for better naming

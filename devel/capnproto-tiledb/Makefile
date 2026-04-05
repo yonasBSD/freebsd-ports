@@ -1,12 +1,13 @@
 PORTNAME=	capnproto
 PORTVERSION=	1.3.0
 DISTVERSIONPREFIX=	c++-
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://capnproto.org/
-PKGNAMESUFFIX=	1
+PKGNAMESUFFIX=	-tiledb
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Serialization/RPC system
+COMMENT=	Serialization/RPC system (for databases/tiledb)
 WWW=		https://capnproto.org/ \
 		https://github.com/capnproto/capnproto
 
