@@ -156,7 +156,7 @@ RUBY_DISTVERSION=	3.3.11
 #
 # Ruby 3.4
 #
-RUBY_DISTVERSION=	3.4.8
+RUBY_DISTVERSION=	3.4.9
 
 .      elif ${RUBY_VER} == 4.0
 #
