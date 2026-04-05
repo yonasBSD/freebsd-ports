@@ -1,22 +1,21 @@
 PORTNAME=	jujutsu
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.39.0
-PORTREVISION=	1
+DISTVERSION=	0.40.0
 CATEGORIES=	devel
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Git-compatible VCS that is both simple and powerful
-WWW=		https://docs.jj-vcs.dev/latest/
+WWW=		https://docs.jj-vcs.dev/v${DISTVERSION}/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+RUN_DEPENDS=	git:devel/git
 
 USES=		cargo localbase shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	jj-vcs
 GH_PROJECT=	jj
-
-TEST_DEPENDS=	git:devel/git
 
 SHEBANG_FILES=	demos/*.sh
 
@@ -27,5 +26,12 @@ do-install:
 			${STAGEDIR}${PREFIX}/bin/
 		cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 		cd ${WRKSRC}/demos && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
+		${STAGEDIR}${PREFIX}/bin/jj util install-man-pages ${STAGEDIR}${PREFIX}/share/man/
+		${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
+		${STAGEDIR}${PREFIX}/bin/jj util completion bash > ${STAGEDIR}${PREFIX}/etc/bash_completion.d/jujutsu
+		${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/completions
+		${STAGEDIR}${PREFIX}/bin/jj util completion bash > ${STAGEDIR}${PREFIX}/share/fish/completions/jujutsu.fish
+		${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
+		${STAGEDIR}${PREFIX}/bin/jj util completion zsh > ${STAGEDIR}${PREFIX}/share/zsh/site-functions/_jujutsu
 
 .include <bsd.port.mk>
