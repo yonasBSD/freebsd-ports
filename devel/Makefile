@@ -8108,6 +8108,7 @@
     SUBDIR += rubygem-ruby2ruby
     SUBDIR += rubygem-ruby_memcheck
     SUBDIR += rubygem-ruby_parser
+    SUBDIR += rubygem-rubygems-generate_index
     SUBDIR += rubygem-rubygems-mirror
     SUBDIR += rubygem-rubygems-tasks
     SUBDIR += rubygem-rubygems-test
