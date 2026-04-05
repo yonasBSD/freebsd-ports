@@ -5359,6 +5359,7 @@
     SUBDIR += py-multiset
     SUBDIR += py-multitasking
     SUBDIR += py-munch
+    SUBDIR += py-munge
     SUBDIR += py-murmurhash
     SUBDIR += py-mutf8
     SUBDIR += py-mutmut
