@@ -1,11 +1,11 @@
 PORTNAME=	navi2ch
 PORTVERSION=	2.0.0.d
-PORTREVISION=	26
+PORTREVISION=	27
 PORTEPOCH=	1
 CATEGORIES=	japanese www elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	hrs@FreeBSD.org
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	2ch.net and 2ch-like BBS navigator for Emacsen
 WWW=		https://navi2ch.sourceforge.net
 
@@ -34,7 +34,6 @@ PORTDOC_LISPS=	gikope.el navi2ch-logo.el navi2ch-migemo.el
 LISPDIR=	${EMACS_VERSION_SITE_LISPDIR}
 
 OPTIONS_DEFINE=	DOCS X11
-OPTIONS_DEFAULT=X11
 X11_RUN_DEPENDS=${LOCALBASE}/share/fonts/mona/monak12.pcf.gz:japanese/font-mona
 
 post-install-DOCS-on:
