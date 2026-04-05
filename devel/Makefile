@@ -7714,6 +7714,7 @@
     SUBDIR += rubygem-map
     SUBDIR += rubygem-marcel
     SUBDIR += rubygem-marcel-gitlab
+    SUBDIR += rubygem-mcp
     SUBDIR += rubygem-memo_wise
     SUBDIR += rubygem-memoist
     SUBDIR += rubygem-memoist3
