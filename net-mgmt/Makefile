@@ -10,7 +10,7 @@
     SUBDIR += andwatch
     SUBDIR += ap-utils
     SUBDIR += argus
-    SUBDIR += argus3-clients
+    SUBDIR += argus-clients
     SUBDIR += arpscan
     SUBDIR += arpwatch
     SUBDIR += arts++
