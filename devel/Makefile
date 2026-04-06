@@ -6768,6 +6768,7 @@
     SUBDIR += rubygem-aws-sdk-deadline
     SUBDIR += rubygem-aws-sdk-detective
     SUBDIR += rubygem-aws-sdk-devicefarm
+    SUBDIR += rubygem-aws-sdk-devopsagent
     SUBDIR += rubygem-aws-sdk-devopsguru
     SUBDIR += rubygem-aws-sdk-directconnect
     SUBDIR += rubygem-aws-sdk-directoryservice
