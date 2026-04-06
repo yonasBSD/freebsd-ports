@@ -622,6 +622,7 @@
     SUBDIR += py-wurlitzer
     SUBDIR += py-xformers
     SUBDIR += py-xgboost
+    SUBDIR += py-xgrammar
     SUBDIR += pyobd
     SUBDIR += pytorch
     SUBDIR += qbrew
