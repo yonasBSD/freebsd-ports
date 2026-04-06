@@ -1,0 +1,11 @@
+--- config.orig	2026-04-04 22:01:58.547725000 +0000
++++ config	2026-04-04 22:02:29.139734000 +0000
+@@ -7,7 +7,7 @@
+   name="default"
+ fi
+ 
+-if test "$name" != "default" -a "$name" != "alpha" -a "$name" != "dec" -a "$name" != "sgi" -a "$name" != "sysV" -a "$name" != "solaris" -a "$name" != "mingw"
++if test "$name" != "default" -a "$name" != "alpha" -a "$name" != "dec" -a "$name" != "sgi" -a "$name" != "sysV" -a "$name" != "solaris" -a "$name" != "mingw" -a "$name" != "freebsd"
+ then
+   echo config: Unknown type: $1.  Choose one of: default, alpha, dec, sgi, sysV, solaris, mingw
+ else
