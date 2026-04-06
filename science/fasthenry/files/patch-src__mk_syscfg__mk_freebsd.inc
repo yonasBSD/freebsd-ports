@@ -1,5 +1,5 @@
---- /dev/null	2026-04-04 21:53:35.827546000 +0000
-+++ src/mk_syscfg/mk_freebsd.inc	2026-04-04 21:52:38.905644000 +0000
+--- src/mk_syscfg/mk_freebsd.inc.orig	2026-04-06 08:54:12 UTC
++++ src/mk_syscfg/mk_freebsd.inc
 @@ -0,0 +1,34 @@
 +# These CFLAGS should be fine for anything that is reasonably recent
 +# except for MinGW.
