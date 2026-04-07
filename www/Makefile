@@ -1881,6 +1881,7 @@
     SUBDIR += py-primp
     SUBDIR += py-priority
     SUBDIR += py-priority1
+    SUBDIR += py-prometheus-fastapi-instrumentator
     SUBDIR += py-protego
     SUBDIR += py-proxy.py
     SUBDIR += py-proxy_tools
