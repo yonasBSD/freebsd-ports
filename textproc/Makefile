@@ -1775,6 +1775,7 @@
     SUBDIR += py-zensical
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zpt
+    SUBDIR += pymupdf4llm-mcp
     SUBDIR += qo
     SUBDIR += qprint
     SUBDIR += qr
