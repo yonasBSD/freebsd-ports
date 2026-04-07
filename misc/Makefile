@@ -519,6 +519,7 @@
     SUBDIR += py-llama-cpp-python
     SUBDIR += py-llm
     SUBDIR += py-llm-claude-3
+    SUBDIR += py-lm-format-enforcer
     SUBDIR += py-log_symbols
     SUBDIR += py-mcp
     SUBDIR += py-mem0ai
