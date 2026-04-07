@@ -623,6 +623,7 @@
     SUBDIR += py-uhi
     SUBDIR += py-uuid-utils
     SUBDIR += py-vaderSentiment
+    SUBDIR += py-vllm
     SUBDIR += py-wandb
     SUBDIR += py-wurlitzer
     SUBDIR += py-xformers
