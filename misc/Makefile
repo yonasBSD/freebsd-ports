@@ -458,6 +458,7 @@
     SUBDIR += py-comfyui-workflow-templates-media-image
     SUBDIR += py-comfyui-workflow-templates-media-other
     SUBDIR += py-comfyui-workflow-templates-media-video
+    SUBDIR += py-compressed-tensors
     SUBDIR += py-cppman
     SUBDIR += py-crudini
     SUBDIR += py-csvw
