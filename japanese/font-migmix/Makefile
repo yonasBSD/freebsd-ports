@@ -20,42 +20,35 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USES=		fonts:fc zip
 FONTPATHSPEC=	${FONTNAME}:pri=60
+
 NO_ARCH=	yes
 NO_BUILD=	yes
+SUB_FILES=	pkg-install
+
 PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${WRKDIR}/pkg-install
-SUB_FILES=	pkg-install
-PORTDOCS=	Readme_ipag00303.txt migmix-README.txt
+PORTDOCS=	${FONTNAME}-README.txt Readme_ipag00303.txt
 
 OPTIONS_DEFINE=	DOCS
 
 _1VER=		20200307
 _2VER=		${DISTVERSION:E}
+_CONF=		20-unhint-${FONTNAME}.conf 62-fonts-${FONTNAME}.conf
 
 do-install:
-	cd ${WRKDIR}/${PORTNAME}-2m-${_2VER}/ && \
-	    ${INSTALL_DATA} ipag00303/*.txt \
-		migmix-README.txt \
-		${WRKDIR}
 	@${MKDIR} ${STAGEDIR}${FONTSDIR}
-	${INSTALL_DATA} \
-	    ${WRKDIR}/${PORTNAME}-1m-${_1VER}/*.ttf \
-	    ${WRKDIR}/${PORTNAME}-2m-${_2VER}/*.ttf \
-	    ${WRKDIR}/${PORTNAME}-1p-${_1VER}/*.ttf \
-	    ${WRKDIR}/${PORTNAME}-2p-${_2VER}/*.ttf \
-	    ${STAGEDIR}${FONTSDIR}
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/fonts/conf.avail \
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}-*/*.ttf ${STAGEDIR}${FONTSDIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/fonts/conf.avail \
 	    ${STAGEDIR}${PREFIX}/etc/fonts/conf.d
-	${INSTALL_DATA} ${FILESDIR}/20-unhint-${FONTNAME}.conf \
-	    ${FILESDIR}/62-fonts-${FONTNAME}.conf \
+	${INSTALL_DATA} ${_CONF:S,^,${FILESDIR}/,} \
 	    ${STAGEDIR}${PREFIX}/etc/fonts/conf.avail
-	${LN} -s -f ../conf.avail/20-unhint-${FONTNAME}.conf \
-	    ${STAGEDIR}${PREFIX}/etc/fonts/conf.d/20-unhint-${FONTNAME}.conf
-	${LN} -s -f ../conf.avail/62-fonts-${FONTNAME}.conf \
-	    ${STAGEDIR}${PREFIX}/etc/fonts/conf.d/62-fonts-${FONTNAME}.conf
+	${RLN} ${_CONF:S,^,../conf.avail/,} \
+	    ${STAGEDIR}${PREFIX}/etc/fonts/conf.d/
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	cd ${WRKDIR} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKDIR}/${PORTNAME}-2m-${_2VER}/ && \
+	    ${INSTALL_DATA} ${PORTDOCS:S,^Readme,ipag00303/Readme,} \
+	    ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
