@@ -531,6 +531,7 @@
     SUBDIR += py-mmdet
     SUBDIR += py-mmengine
     SUBDIR += py-mmsegmentation
+    SUBDIR += py-model-hosting-container-standards
     SUBDIR += py-molequeue
     SUBDIR += py-napari
     SUBDIR += py-napari-svg
