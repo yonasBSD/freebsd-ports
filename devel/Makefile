@@ -5654,6 +5654,7 @@
     SUBDIR += py-pyaml-env
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
+    SUBDIR += py-pybase64
     SUBDIR += py-pybind11
     SUBDIR += py-pybix
     SUBDIR += py-pybreaker
