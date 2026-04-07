@@ -4849,6 +4849,7 @@
     SUBDIR += py-deprecated
     SUBDIR += py-deprecation
     SUBDIR += py-deptry
+    SUBDIR += py-depyf
     SUBDIR += py-devtools
     SUBDIR += py-dexml2
     SUBDIR += py-diagnostic
