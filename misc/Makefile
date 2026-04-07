@@ -525,6 +525,7 @@
     SUBDIR += py-mem0ai
     SUBDIR += py-mffpy
     SUBDIR += py-misaki
+    SUBDIR += py-mistral-common
     SUBDIR += py-mixpanel
     SUBDIR += py-ml-collections
     SUBDIR += py-mmcv
