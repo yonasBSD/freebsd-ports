@@ -1536,6 +1536,7 @@
     SUBDIR += py-parsel
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
+    SUBDIR += py-partial-json-parser
     SUBDIR += py-patiencediff
     SUBDIR += py-pdf2docx
     SUBDIR += py-pdfminer.six
