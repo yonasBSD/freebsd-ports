@@ -1,4 +1,4 @@
 Desktop client using jellyfin-web with embedded MPV player.
 
-Media plays within the same window using the jellyfin-web interface unlike
-Jellyfin Desktop. Supports audio passthrough.
+Media plays within the same window using the jellyfin-web interface.
+Supports audio passthrough. Built on Qt6.
