@@ -16,6 +16,9 @@ RUN_DEPENDS=	rg:textproc/ripgrep
 
 USES=		nodejs:run
 
+JS_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/:S/i386/ia32/:S/powerpc64le/ppc64le/:S/powerpc64/ppc64/:C/armv[67]/arm/} # modeled after electron.mk
+PLIST_SUB=	JS_ARCH=${JS_ARCH}
+
 OPTIONS_DEFINE=		AUDIO_CAPTURE
 OPTIONS_DEFAULT=	AUDIO_CAPTURE
 OPTIONS_SUB=		yes
@@ -38,8 +41,6 @@ AUDIO_CAPTURE_WRKSRC=	${WRKDIR}/audio-capture-${AUDIO_CAPTURE_COMMIT}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAUDIO_CAPTURE}
-ONLY_FOR_ARCHS=		amd64
-ONLY_FOR_ARCHS_REASON=	audio capture module only supports amd64
 DISTFILES+=	audio-capture-${AUDIO_CAPTURE_COMMIT}${EXTRACT_SUFX}:audio_capture_src
 .else
 NO_BUILD=	yes
