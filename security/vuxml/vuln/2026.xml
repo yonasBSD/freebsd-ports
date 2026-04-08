@@ -687,7 +687,7 @@
     <package><name>python312</name> <range><lt>3.12.13_2</lt></range></package>
     <package><name>python313</name> <range><lt>3.13.12_3</lt></range></package>
     <package><name>python313t</name> <range><lt>3.13.12_3</lt></range></package>
-    <package><name>python314</name> <range><ge>0</ge></range></package>
+    <package><name>python314</name> <range><lt>3.14.4</lt></range></package>
     </affects>
     <description>
 	<body xmlns="http://www.w3.org/1999/xhtml">
