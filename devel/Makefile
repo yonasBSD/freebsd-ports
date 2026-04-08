@@ -6265,6 +6265,7 @@
     SUBDIR += py-user_agents
     SUBDIR += py-userpath
     SUBDIR += py-usort
+    SUBDIR += py-uuid6
     SUBDIR += py-uuid7
     SUBDIR += py-uv
     SUBDIR += py-uv-build
