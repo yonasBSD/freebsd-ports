@@ -8,8 +8,10 @@ MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Agentic coding tool from Anthropic that lives in your terminal
 WWW=		https://github.com/anthropics/claude-code
 
-FETCH_DEPENDS=	npm:www/npm \
+FETCH_DEPENDS=	cargo:lang/rust \
+		curl:ftp/curl \
 		jq:textproc/jq \
+		npm:www/npm \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 RUN_DEPENDS=	rg:textproc/ripgrep
 
@@ -40,7 +42,6 @@ AUDIO_CAPTURE_WRKSRC=	${WRKDIR}/audio-capture-${AUDIO_CAPTURE_COMMIT}
 ONLY_FOR_ARCHS=		amd64
 ONLY_FOR_ARCHS_REASON=	audio capture module only supports amd64
 DISTFILES+=	audio-capture-${AUDIO_CAPTURE_COMMIT}${EXTRACT_SUFX}:audio_capture_src
-MASTER_SITES+=	https://github.com/kstonekuan/audio-capture/archive/:audio_capture_src
 .else
 NO_BUILD=	yes
 NO_ARCH=	yes
