@@ -1,6 +1,5 @@
 PORTNAME=	claude-code
-DISTVERSION=	2.1.90
-PORTREVISION=	2
+DISTVERSION=	2.1.96
 CATEGORIES=	misc # machine-learning
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
@@ -65,7 +64,7 @@ do-fetch-AUDIO_CAPTURE-on:
 
 # Raise API and MCP transport timeouts to 24 hours for slow (e.g. CPU-based) servers
 post-extract:
-	${REINPLACE_CMD} \
+	${REINPLACE_CMD} -i '' \
 		-e 's/var EP5=60000;/var EP5=86400000;/' \
 		-e 's/API_TIMEOUT_MS||String(600000)/API_TIMEOUT_MS||String(86400000)/' \
 		-e 's/DEFAULT_TIMEOUT=600000;/DEFAULT_TIMEOUT=86400000;/' \
@@ -73,7 +72,7 @@ post-extract:
 
 post-extract-AUDIO_CAPTURE-on:
 	# patch cli.js to load audio-capture on FreeBSD
-	${REINPLACE_CMD} \
+	${REINPLACE_CMD} -i '' \
 		-e 's|q!=="darwin"&&q!=="linux"&&q!=="win32"|q!=="darwin"\&\&q!=="linux"\&\&q!=="win32"\&\&q!=="freebsd"|' \
 		${CLI_JS}
 
@@ -98,6 +97,8 @@ do-install:
 	${INSTALL_LIB} ${AUDIO_CAPTURE_WRKSRC}/target/release/libaudio_capture.so \
 		${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/vendor/audio-capture/x64-freebsd/audio-capture.node
 .endif
+	# remove Linux-only seccomp binaries (seccomp is a Linux kernel API, guarded by process.platform==="linux" in cli.js)
+	@${RM} -r ${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/vendor/seccomp
 	# remove bundled ripgrep
 	@${RM} -r ${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/vendor/ripgrep
 	# remove empty vendor subdirectories (and vendor/ itself when AUDIO_CAPTURE=OFF)

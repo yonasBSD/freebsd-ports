@@ -2,7 +2,6 @@ bin/claude
 lib/node_modules/.bin/claude
 lib/node_modules/@anthropic-ai/claude-code/LICENSE.md
 lib/node_modules/@anthropic-ai/claude-code/README.md
-lib/node_modules/@anthropic-ai/claude-code/bun.lock
 lib/node_modules/@anthropic-ai/claude-code/cli.js
 lib/node_modules/@anthropic-ai/claude-code/package.json
 lib/node_modules/@anthropic-ai/claude-code/sdk-tools.d.ts
