@@ -1,5 +1,5 @@
 PORTNAME=	github-copilot-language-server
-DISTVERSION=	1.457.0
+DISTVERSION=	1.465.0
 CATEGORIES=	misc # machine-learning
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 		${NODE_HEADERS}${EXTRACT_SUFX}
@@ -48,8 +48,6 @@ dep_kerberos_version=		7.0.0
 .for dep in ${DEP_MODULES}
 DISTFILES+=	${dep:S/_/-/g}-${dep_${dep}_version}${EXTRACT_SUFX}
 .endfor
-
-#NO_CHECKSUM=	yes
 
 do-fetch:
 	@if ! [ -f ${DD}/${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} ] || \
