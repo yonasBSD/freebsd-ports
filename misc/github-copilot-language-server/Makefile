@@ -12,9 +12,6 @@ WWW=		https://github.com/github/copilot-language-server-release
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/node_modules/${PACKAGE_NAME}/LICENSE
 
-ONLY_FOR_ARCHS=		aarch64 amd64
-ONLY_FOR_ARCHS_REASON=	binaries are installed in folders with architecture encoded in them, patches are welcome to fix this limitation
-
 FETCH_DEPENDS=	npm:www/npm \
 		jq:textproc/jq \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
@@ -33,7 +30,7 @@ PACKAGE_NAME=	@github/copilot-language-server
 
 NODE_HEADERS=	node-v24.11.0-headers
 
-JS_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/}
+JS_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/:S/i386/ia32/:S/powerpc64le/ppc64le/:S/powerpc64/ppc64/:C/armv[67]/arm/} # modeled after electron.mk
 PLIST_SUB=	JS_ARCH=${JS_ARCH}
 
 DD=		${DISTDIR}/${DIST_SUBDIR}
