@@ -76,7 +76,7 @@
     <description>
 	<body xmlns="http://www.w3.org/1999/xhtml">
 	<p>The OpenSSL project reports:</p>
-	<blockquote cite="https://openssl-library.org/news/vulnerabilities/">
+	<blockquote cite="https://openssl-library.org/news/secadv/20260407.txt">
 	  <p>Seven vulnerabilities in OpenSSL library. Highest classification Moderate.</p>
 	</blockquote>
 	</body>
@@ -90,7 +90,7 @@
       <cvename>CVE-2026-28389</cvename>
       <cvename>CVE-2026-28390</cvename>
       <cvename>CVE-2026-31789</cvename>
-      <url>https://openssl-library.org/news/vulnerabilities/</url>
+      <url>https://openssl-library.org/news/secadv/20260407.txt</url>
     </references>
     <dates>
       <discovery>2026-04-07</discovery>
