@@ -1,7 +1,6 @@
 PORTNAME=	access-log-exporter
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.6
-PORTREVISION=	1
+DISTVERSION=	0.3.9
 CATEGORIES=	www
 
 MAINTAINER=	otis@FreeBSD.org
@@ -13,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 EXTRACT_DEPENDS=	${BUILD_DEPENDS}
 
-USES=		go:modules
+USES=		go:1.26+,modules
 USE_RC_SUBR=	access_log_exporter
 
 GO_MODULE=	github.com/jkroepke/access-log-exporter
