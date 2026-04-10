@@ -12,6 +12,7 @@ WWW=           https://github.com/dl8dtl/xonix
 LICENSE=       BSD2CLAUSE
 
 USES=          imake
+WRKSRC=        ${WRKDIR}/xonix-${PORTVERSION}
 USE_XORG=      xaw
 
 .include <bsd.port.mk>
