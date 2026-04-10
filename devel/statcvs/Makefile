@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/etc/LICENSE
 BROKEN_armv6=		fails to compile: build.xml: compilation failed
 BROKEN_armv7=		fails to compile: build.xml: compilation failed
 
-USES=		java:ant zip
+USES=		java:ant,run zip
 
 NO_ARCH=	yes
 

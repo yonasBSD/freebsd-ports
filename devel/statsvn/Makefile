@@ -20,7 +20,7 @@ RUN_DEPENDS=	subversion>0:devel/subversion
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
-USES=		java:ant zip
+USES=		java:ant,run zip
 
 NO_ARCH=	yes
 
