@@ -1,6 +1,7 @@
 PORTNAME=	syncthing
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.16
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
 DISTNAME=	${PORTNAME}-source-${DISTVERSIONFULL}
@@ -40,10 +41,10 @@ OPTIONS_DEFINE=	DOCS
 
 do-build:
 	@( cd ${WRKSRC}/${PORTNAME} ; \
-		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run build.go -version v${DISTVERSION} -no-upgrade build ; \
-		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run build.go -version v${DISTVERSION} -no-upgrade build stdiscosrv; \
-		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run build.go -version v${DISTVERSION} -no-upgrade build strelaysrv; \
-		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run build.go -version v${DISTVERSION} -no-upgrade build strelaypoolsrv; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run -x build.go -version v${DISTVERSION} -no-upgrade build ; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run -x build.go -version v${DISTVERSION} -no-upgrade build stdiscosrv; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run -x build.go -version v${DISTVERSION} -no-upgrade build strelaysrv; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run -x build.go -version v${DISTVERSION} -no-upgrade build strelaypoolsrv; \
 		)
 
 do-install:
@@ -59,6 +60,6 @@ do-install:
 
 do-test:
 	@( cd ${WRKSRC}/${PORTNAME} ; \
-		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run build.go -version v${DISTVERSION} -no-upgrade test ; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} run -x build.go -version v${DISTVERSION} -no-upgrade test ; \
 		)
 .include <bsd.port.mk>
