@@ -1,6 +1,6 @@
 PORTNAME=	statcvs
 PORTVERSION=	0.7.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel java
 MASTER_SITES=	SF/${PORTNAME}/Download%20StatCVS/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
@@ -16,7 +16,6 @@ BROKEN_armv6=		fails to compile: build.xml: compilation failed
 BROKEN_armv7=		fails to compile: build.xml: compilation failed
 
 USES=		java:ant zip
-JAVA_VERSION=	8
 
 NO_ARCH=	yes
 
