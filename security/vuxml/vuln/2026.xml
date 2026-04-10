@@ -1,3 +1,43 @@
+  <vuln vid="431c2753-3503-11f1-bc6d-3c7c3fba4204">
+    <topic>DNSdist -- vulnerabilities</topic>
+    <affects>
+    <package>
+	<name>dnsdist</name>
+	<range><lt>2.0.3</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://www.dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2026-02.html reports:</p>
+	<blockquote cite="https://www.dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2026-02.html">
+	  <ul>
+	    <li>CVE-2026-0396: HTML injection in the web dashboard</li>
+	    <li>CVE-2026-0397: Information disclosure via CORS misconfiguration</li>
+	    <li>CVE-2026-24028: Out-of-bounds read when parsing DNS packets via Lua</li>
+	    <li>CVE-2026-24029: DNS over HTTPS ACL bypass</li>
+	    <li>CVE-2026-24030: Unbounded memory allocation for DoQ and DoH3</li>
+	    <li>CVE-2026-27853: Out-of-bounds write when rewriting large DNS packets</li>
+	    <li>CVE-2026-27854: Use after free when parsing EDNS options in Lua</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-0396</cvename>
+      <cvename>CVE-2026-0397</cvename>
+      <cvename>CVE-2026-24028</cvename>
+      <cvename>CVE-2026-24029</cvename>
+      <cvename>CVE-2026-24030</cvename>
+      <cvename>CVE-2026-27853</cvename>
+      <cvename>CVE-2026-27854</cvename>
+      <url>https://www.dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2026-02.html</url>
+    </references>
+    <dates>
+      <discovery>2026-03-31</discovery>
+      <entry>2026-04-10</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="d77bd2f5-34f0-11f1-bc6d-3c7c3fba4204">
     <topic>Mbed TLS -- vulnerabilities</topic>
     <affects>
