@@ -1,18 +1,18 @@
-PORTNAME=      xonix
-PORTVERSION=   1.5
-CATEGORIES=    games
-MASTER_SITES=  https://github.com/dl8dtl/xonix/archive/refs/tags/
-DISTNAME=      v${PORTVERSION}
-DIST_SUBDIR=   xonix
+PORTNAME=	xonix
+DISTVERSIONPREFIX=	v
+DISTVERSION=   1.5
+CATEGORIES=	games
 
-MAINTAINER=    joerg@FreeBSD.org
-COMMENT=       Try to win land without colliding with "flyers" and "eaters"
-WWW=           https://github.com/dl8dtl/xonix
+MAINTAINER=	joerg@FreeBSD.org
+COMMENT=	Try to win land without colliding with "flyers" and "eaters"
+WWW=		https://github.com/dl8dtl/xonix
 
-LICENSE=       BSD2CLAUSE
+LICENSE=	BSD2CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=          imake
-WRKSRC=        ${WRKDIR}/xonix-${PORTVERSION}
-USE_XORG=      x11 xaw xorgproto
+USES=		imake xorg
+USE_XORG=	ice sm x11 xaw xext xmu xpm xt
+USE_GITHUB=	yes
+GH_ACCOUNT=	dl8dtl
 
 .include <bsd.port.mk>
