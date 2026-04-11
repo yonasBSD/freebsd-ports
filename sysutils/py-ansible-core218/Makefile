@@ -1,23 +1,17 @@
-# XXX Note to users:
-# XXX To build this port one must add DEFAULT_VERSIONS+=python=3.12
-# XXX to /etc/make.conf and rebuild all one's python ports. Use this
-# XXX workaround until Python 3.12 becomes the default.
-
 PORTNAME=	ansible-core
-DISTVERSION=	2.20.2
+DISTVERSION=	2.18.7
+PORTREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	${PORTNAME:R:S/-/_/}-${DISTVERSION}${EXTRACT_SUFX}
 .if !defined(MASTERDIR)
-PKGNAMESUFFIX=	220
+PKGNAMESUFFIX=	218
 .endif
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Radically simple IT automation
 WWW=		https://www.ansible.com/
-
-CONFLICTS_INSTALL= py*-ansible-core-* py*-ansible-core219-*
 
 WRKSRC=		${WRKDIR}/${PORTNAME:R:S/-/_/}-${DISTVERSION}
 
