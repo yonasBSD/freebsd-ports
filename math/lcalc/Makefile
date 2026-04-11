@@ -1,6 +1,7 @@
 PORTNAME=	lcalc
 DISTVERSION=	2.2.1
 CATEGORIES=	math
+MASTER_SITES=	https://gitlab.com/-/project/12934202/uploads/0bcf82cdd02412faf9ec0cf80e656610/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	L-function c++ class library and the CLI program lcalc
@@ -12,14 +13,10 @@ LICENSE_FILE=	${WRKSRC}/doc/COPYING
 BUILD_DEPENDS=	gengetopt:devel/gengetopt
 LIB_DEPENDS=	libpari.so:math/pari
 
-USES=		autoreconf compiler:c++11-lang gmake libtool localbase pkgconfig	\
-		tar:bz2
-
-USE_GITLAB=	yes
-GL_ACCOUNT=	sagemath
+USES=		compiler:c++11-lang gmake libtool localbase pkgconfig tar:xz
+USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
-USE_LDCONFIG=	yes
 
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
