@@ -13,6 +13,6 @@ LICENSE=       BSD2CLAUSE
 
 USES=          imake
 WRKSRC=        ${WRKDIR}/xonix-${PORTVERSION}
-USE_XORG=      xaw
+USE_XORG=      x11 xaw xorgproto
 
 .include <bsd.port.mk>
