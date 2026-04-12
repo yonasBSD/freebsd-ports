@@ -227,6 +227,7 @@
     SUBDIR += hidden-lake
     SUBDIR += highwayhash
     SUBDIR += himitsu
+    SUBDIR += hiprompt-gtk
     SUBDIR += hitch
     SUBDIR += hockeypuck
     SUBDIR += honeytrap
