@@ -6,6 +6,15 @@ You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
 20260412:
+  AFFECTS: Users of sysutils/ansible
+  AUTHOR: cy@FreeBSD.org
+
+  An overhaul of the templating system and a new feature called Data Tagging
+  may affect existing roles resulting in problematic behaviours. Users should
+  review the Ansible 12 Porting Guide at
+  https://docs.ansible.com/projects/ansible/devel/porting_guides/porting_guide_12.html
+
+20260412:
   AFFECTS: Users of sysutils/py-ansible-core
   AUTHOR: cy@FreeBSD.org
 
