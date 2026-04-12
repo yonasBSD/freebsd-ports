@@ -982,6 +982,7 @@
     SUBDIR += hare
     SUBDIR += hare-gi
     SUBDIR += hare-adwaita
+    SUBDIR += hare-gtk4-layer-shell
     SUBDIR += hcs12mem
     SUBDIR += heaptrack
     SUBDIR += heimdall
