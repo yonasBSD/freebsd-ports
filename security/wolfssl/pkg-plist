@@ -143,7 +143,6 @@ include/wolfssl/wolfcrypt/siphash.h
 include/wolfssl/wolfcrypt/sm2.h
 include/wolfssl/wolfcrypt/sm3.h
 include/wolfssl/wolfcrypt/sm4.h
-include/wolfssl/wolfcrypt/sp.h
 include/wolfssl/wolfcrypt/sp_int.h
 include/wolfssl/wolfcrypt/sphincs.h
 include/wolfssl/wolfcrypt/srp.h
