@@ -967,6 +967,7 @@
     SUBDIR += py-gssapi
     SUBDIR += py-guardpost
     SUBDIR += py-gvm-tools
+    SUBDIR += py-himitsu-keyring
     SUBDIR += py-hkdf
     SUBDIR += py-htpasswd
     SUBDIR += py-httpx-auth
