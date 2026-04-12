@@ -981,6 +981,7 @@
     SUBDIR += hapy
     SUBDIR += hare
     SUBDIR += hare-gi
+    SUBDIR += hare-adwaita
     SUBDIR += hcs12mem
     SUBDIR += heaptrack
     SUBDIR += heimdall
