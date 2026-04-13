@@ -220,6 +220,47 @@
     </dates>
   </vuln>
 
+  <vuln vid="b8e9f33c-375d-11f1-a119-e36228bfe7d4">
+    <topic>Python -- use-after-free vulnerability in decompressors under memory pressure</topic>
+    <affects>
+      <package><name>python310</name><range><ge>0</ge></range></package>
+      <package><name>python311</name><range><ge>0</ge></range></package>
+      <package><name>python312</name><range><ge>0</ge></range></package>
+      <package><name>python313</name><range><ge>0</ge></range></package>
+      <package><name>python314</name><range><lt>3.14.4_1</lt></range></package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Seth Larson reports:</p>
+	<blockquote cite="https://mail.python.org/archives/list/security-announce@python.org/thread/HTWB2Z6KT5QQX4RYEZAFININDHNOSIF3/">
+	  <p>There is a CRITICAL severity vulnerability affecting CPython.</p>
+	  <p>Use-after-free (UAF) was possible in the lzma.LZMADecompressor,
+	    bz2.BZ2Decompressor, and gzip.GzipFile when a memory allocation fails
+	    with a MemoryError and the decompression instance is re-used. This
+	    scenario can be triggered if the process is under memory pressure. The fix
+	    cleans up the dangling pointer in this specific error condition.</p>
+	  <p>The vulnerability is only present if the program re-uses decompressor
+	    instances across multiple decompression calls even after a MemoryError is
+	    raised during decompression. Using the helper functions to one-shot
+	    decompress data such as lzma.decompress(), bz2.decompress(),
+	    gzip.decompress(), and zlib.decompress() are not affected as a new
+	    decompressor instance is created for each call. If the decompressor
+	    instance is not re-used after an error condition, this usage is similarly
+	    not vulnerable.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-6100</cvename>
+      <url>https://mail.python.org/archives/list/security-announce@python.org/thread/HTWB2Z6KT5QQX4RYEZAFININDHNOSIF3/</url>
+      <url>https://github.com/python/cpython/issues/148395</url>
+    </references>
+    <dates>
+      <discovery>2026-04-11</discovery>
+      <entry>2026-04-13</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="57f31f61-36a1-11f1-9839-8447094a420f">
     <topic>Vaultwarden -- Multiple vulnerabilities</topic>
     <affects>
