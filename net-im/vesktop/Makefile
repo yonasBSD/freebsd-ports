@@ -2,11 +2,7 @@ PORTNAME=	vesktop
 DISTVERSION=	1.6.3
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/Vencord/Vesktop/releases/download/v${DISTVERSION}/
-.if ${ARCH} == "amd64"
-DISTNAME=	${PORTNAME}_${DISTVERSION}_amd64
-.elif ${ARCH} == "aarch64"
-DISTNAME=	${PORTNAME}_${DISTVERSION}_arm64
-.endif
+DISTNAME=	${PORTNAME}_${DISTVERSION}_${ARCH:S/aarch64/arm64/}
 EXTRACT_SUFX=	.deb
 
 MAINTAINER=	celeste@ornato.com
