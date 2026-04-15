@@ -14,9 +14,10 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 USES=		imake:notall,noman tar:bzip2
 USE_LDCONFIG=	yes
+
+MAKE_JOBS_UNSAFE=	yes
 ALL_TARGET=	canna
 INSTALL_TARGET=	instsgs
-MAKE_JOBS_UNSAFE=	yes
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so.1
