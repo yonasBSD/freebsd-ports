@@ -16,9 +16,11 @@ LIB_DEPENDS=	libcanna.so:japanese/canna-lib
 
 USES=		imake tar:bzip2
 USE_RC_SUBR=	canna
-INSTALL_TARGET=	instserver instclient
-PORTDOCS=	CHANGES.jp ChangeLog README.jp RKCCONF.jp
+
 MAKE_JOBS_UNSAFE=	yes
+INSTALL_TARGET=	instserver instclient
+
+PORTDOCS=	CHANGES.jp ChangeLog README.jp RKCCONF.jp
 
 OPTIONS_DEFINE=	DOCS
 
