@@ -1656,6 +1656,7 @@
     SUBDIR += luajava
     SUBDIR += lutok
     SUBDIR += luv
+    SUBDIR += lwgrp
     SUBDIR += lwp
     SUBDIR += lxqt-build-tools
     SUBDIR += lxqt2-build-tools
