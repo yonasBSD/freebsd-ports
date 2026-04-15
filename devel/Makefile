@@ -639,6 +639,7 @@
     SUBDIR += dra
     SUBDIR += dragon
     SUBDIR += dsymbol
+    SUBDIR += dtcmp
     SUBDIR += dtool
     SUBDIR += dub
     SUBDIR += dupl
