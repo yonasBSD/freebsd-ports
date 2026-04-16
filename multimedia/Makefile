@@ -50,7 +50,6 @@
     SUBDIR += dvdauthor
     SUBDIR += dvdid
     SUBDIR += dvdread
-    SUBDIR += dvdstyler
     SUBDIR += elementary-videos
     SUBDIR += emby-server
     SUBDIR += ffaudioconverter
