@@ -949,6 +949,7 @@
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-arviz-base
+    SUBDIR += py-arviz-stats
     SUBDIR += py-arybo
     SUBDIR += py-autograd
     SUBDIR += py-awkward
