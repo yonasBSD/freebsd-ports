@@ -948,6 +948,7 @@
     SUBDIR += py-annoy
     SUBDIR += py-apgl
     SUBDIR += py-arviz
+    SUBDIR += py-arviz-base
     SUBDIR += py-arybo
     SUBDIR += py-autograd
     SUBDIR += py-awkward
