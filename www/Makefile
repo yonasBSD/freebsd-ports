@@ -1550,6 +1550,7 @@
     SUBDIR += py-dj52-django-choices-field
     SUBDIR += py-dj52-django-compression-middleware
     SUBDIR += py-dj52-django-cors-headers
+    SUBDIR += py-dj52-django-crispy-forms
     SUBDIR += py-dj52-django-debug-toolbar
     SUBDIR += py-dj52-django-extensions
     SUBDIR += py-dj52-django-filter
