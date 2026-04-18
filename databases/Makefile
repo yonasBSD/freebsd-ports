@@ -852,6 +852,7 @@
     SUBDIR += py-sqlcipher3
     SUBDIR += py-sqlframe
     SUBDIR += py-sqlglot
+    SUBDIR += py-sqlglot-mypy
     SUBDIR += py-sqlglotrs
     SUBDIR += py-sqlite-anyio
     SUBDIR += py-sqlite-fts4
