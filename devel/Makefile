@@ -5517,6 +5517,7 @@
     SUBDIR += py-parameterized
     SUBDIR += py-parsedatetime
     SUBDIR += py-parsley
+    SUBDIR += py-parsy
     SUBDIR += py-parver
     SUBDIR += py-pastel
     SUBDIR += py-patch
