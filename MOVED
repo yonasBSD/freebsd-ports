@@ -5248,3 +5248,4 @@ graphics/libkdcraw@qt6|graphics/libkdcraw|2026-04-16|Unflavorize; only Qt6 is su
 audio/libkcompactdisc||2026-04-16|Development discontinued, not shipped with KDE Gear since 26.04
 multimedia/dvdstyler||2026-04-16|Dead upstream
 emulators/emu64||2026-04-16|Broken, fails to build
+databases/py-sqlglotrs|databases/py-sqlglotc|2026-04-18|Remove obsoleted port. Use databases/py-sqlglotc instead
