@@ -2234,6 +2234,7 @@
     SUBDIR += p5-Connector
     SUBDIR += p5-Const-Exporter
     SUBDIR += p5-Const-Fast
+    SUBDIR += p5-Consumer-NonBlock
     SUBDIR += p5-Context-Preserve
     SUBDIR += p5-Contextual-Return
     SUBDIR += p5-Convert-Age
