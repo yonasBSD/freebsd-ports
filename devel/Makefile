@@ -3227,6 +3227,7 @@
     SUBDIR += p5-Object-Destroyer
     SUBDIR += p5-Object-Enum
     SUBDIR += p5-Object-Event
+    SUBDIR += p5-Object-HashBase
     SUBDIR += p5-Object-Import
     SUBDIR += p5-Object-InsideOut
     SUBDIR += p5-Object-MultiType
