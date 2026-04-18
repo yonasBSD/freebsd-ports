@@ -310,6 +310,7 @@
     SUBDIR += joomla4
     SUBDIR += joomla5
     SUBDIR += jwt-cli
+    SUBDIR += kamal-proxy
     SUBDIR += kanboard
     SUBDIR += kannel
     SUBDIR += kannel-sqlbox
