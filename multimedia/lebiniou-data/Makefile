@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	version-
 DISTVERSION=	3.67.0
 CATEGORIES=	multimedia graphics
 
-MAINTAINER=	lbartoletti@FreeBSD.org
+MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Data for lebiniou
 WWW=		https://gitlab.com/lebiniou/lebiniou-data
 
