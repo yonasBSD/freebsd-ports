@@ -1155,6 +1155,7 @@
     SUBDIR += wfb2sql
     SUBDIR += xapian-bindings
     SUBDIR += xapian-core
+    SUBDIR += xapian-core14
     SUBDIR += xls2txt
     SUBDIR += xrootd
     SUBDIR += xtrabackup80
