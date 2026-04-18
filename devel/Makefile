@@ -1970,6 +1970,7 @@
     SUBDIR += p5-Async-Interrupt
     SUBDIR += p5-Async-MergePoint
     SUBDIR += p5-AtExit
+    SUBDIR += p5-Atomic-Pipe
     SUBDIR += p5-Attribute-Handlers
     SUBDIR += p5-Attribute-Handlers-Prospective
     SUBDIR += p5-Attribute-Persistent
