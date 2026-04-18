@@ -5083,6 +5083,7 @@
     SUBDIR += py-hatch-regex-commit
     SUBDIR += py-hatch-requirements-txt
     SUBDIR += py-hatch-semver
+    SUBDIR += py-hatch-tryton
     SUBDIR += py-hatch-vcs
     SUBDIR += py-hatchling
     SUBDIR += py-heapdict
