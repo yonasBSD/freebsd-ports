@@ -5105,6 +5105,7 @@
     SUBDIR += py-hypothesis-crosshair
     SUBDIR += py-hypothesmith
     SUBDIR += py-icalendar
+    SUBDIR += py-icalendar-searcher
     SUBDIR += py-ice
     SUBDIR += py-ice37
     SUBDIR += py-id
