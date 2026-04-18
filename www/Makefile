@@ -2215,6 +2215,7 @@
     SUBDIR += rubygem-http-accept
     SUBDIR += rubygem-http-cookie
     SUBDIR += rubygem-http-form_data
+    SUBDIR += rubygem-http-form_data2
     SUBDIR += rubygem-http3
     SUBDIR += rubygem-http4
     SUBDIR += rubygem-http_router
