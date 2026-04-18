@@ -4757,6 +4757,7 @@
     SUBDIR += py-condense-json
     SUBDIR += py-conditional
     SUBDIR += py-confection
+    SUBDIR += py-confection0
     SUBDIR += py-configargparse
     SUBDIR += py-configobj
     SUBDIR += py-configparser
