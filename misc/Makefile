@@ -190,6 +190,7 @@
     SUBDIR += gobuster
     SUBDIR += gollama
     SUBDIR += gone
+    SUBDIR += goplaces
     SUBDIR += gplink
     SUBDIR += gpsim
     SUBDIR += granulate
