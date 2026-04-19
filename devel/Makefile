@@ -893,6 +893,7 @@
     SUBDIR += gitolite2
     SUBDIR += gitoxide
     SUBDIR += gitqlient
+    SUBDIR += gittop
     SUBDIR += gittrac
     SUBDIR += gitty
     SUBDIR += gitu
