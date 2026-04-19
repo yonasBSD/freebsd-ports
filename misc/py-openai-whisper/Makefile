@@ -6,7 +6,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Robust Speech Recognition via Large-Scale Weak Supervision
-WWW=		https://openai.com/research/whisper
+WWW=		https://openai.com/research/whisper \
+		https://github.com/openai/whisper
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
