@@ -602,6 +602,7 @@
     SUBDIR += py-sigopt
     SUBDIR += py-smdebug-rulesconfig
     SUBDIR += py-snakemake-interface-common
+    SUBDIR += py-snakemake-interface-executor-plugins
     SUBDIR += py-soapy_power
     SUBDIR += py-spandrel
     SUBDIR += py-spdx-tools
