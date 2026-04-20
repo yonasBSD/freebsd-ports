@@ -1,6 +1,6 @@
 PORTNAME=	openclaw
 DISTVERSION=	2026.4.15
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc # machine-learning
 PKGNAMESUFFIX=	-ai-gateway
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
@@ -23,9 +23,10 @@ RUN_DEPENDS=	vips>=8.17.2:graphics/vips
 USES=		nodejs:run pkgconfig python:build
 USE_RC_SUBR=	${PORTNAME}
 
-OPTIONS_DEFINE=		EXTEND_AI_TIMEOUT
-OPTIONS_DEFAULT=	EXTEND_AI_TIMEOUT
-EXTEND_AI_TIMEOUT_DESC=	Set AI endpoint request timeout to 24 hours for slow models
+OPTIONS_DEFINE=		EXTEND_AI_TIMEOUT EXTEND_TYPING_TTL_TIMEOUT
+OPTIONS_DEFAULT=	EXTEND_AI_TIMEOUT EXTEND_TYPING_TTL_TIMEOUT
+EXTEND_AI_TIMEOUT_DESC=		Set AI endpoint request timeout to 24 hours for slow models
+EXTEND_TYPING_TTL_TIMEOUT_DESC=	Set typing indicator TTL to 5 hours for slow LLM responses
 
 PACKAGE_NAME=	openclaw
 
@@ -111,5 +112,15 @@ post-patch-EXTEND_AI_TIMEOUT-on:
 		-exec ${GREP} -q "DEFAULT_LLM_IDLE_TIMEOUT_MS = 120 \* 1e3" {} \; \
 		-exec ${REINPLACE_CMD} \
 			-e 's/DEFAULT_LLM_IDLE_TIMEOUT_MS = 120 \* 1e3/DEFAULT_LLM_IDLE_TIMEOUT_MS = 0/' {} \;
+	@${FIND} ${WRKSRC}/node_modules/${PACKAGE_NAME}/dist -name "*.js" \
+		-exec ${GREP} -q "new Agent(withHttp1OnlyDispatcherOptions(options))" {} \; \
+		-exec ${REINPLACE_CMD} \
+			-e 's/new Agent(withHttp1OnlyDispatcherOptions(options))/new Agent({ ...withHttp1OnlyDispatcherOptions(options), headersTimeout: 86400000, bodyTimeout: 86400000 })/' {} \;
+
+post-patch-EXTEND_TYPING_TTL_TIMEOUT-on:
+	@${FIND} ${WRKSRC}/node_modules/${PACKAGE_NAME}/dist -name "*.js" \
+		-exec ${GREP} -q "typingTtlMs = 2 \* 6e4" {} \; \
+		-exec ${REINPLACE_CMD} \
+			-e 's/typingTtlMs = 2 \* 6e4/typingTtlMs = 18000000/' {} \;
 
 .include <bsd.port.mk>
