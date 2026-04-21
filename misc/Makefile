@@ -35,6 +35,7 @@
     SUBDIR += binocle
     SUBDIR += biosfont-demos
     SUBDIR += birthday
+    SUBDIR += blogwatcher
     SUBDIR += bogosort
     SUBDIR += bottlerocket
     SUBDIR += box2d
