@@ -293,6 +293,7 @@
     SUBDIR += mcp-inspector
     SUBDIR += mcp-probe
     SUBDIR += mdp
+    SUBDIR += memo
     SUBDIR += meshoptimizer
     SUBDIR += metalink-checker
     SUBDIR += metalink-tools
