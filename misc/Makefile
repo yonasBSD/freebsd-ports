@@ -112,6 +112,7 @@
     SUBDIR += ecflow
     SUBDIR += edfbrowser
     SUBDIR += edflib
+    SUBDIR += eightctl
     SUBDIR += elki
     SUBDIR += elscreen
     SUBDIR += emacs-libvterm
