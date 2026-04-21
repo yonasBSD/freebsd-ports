@@ -195,6 +195,7 @@
     SUBDIR += gpsim
     SUBDIR += granulate
     SUBDIR += grc
+    SUBDIR += grizzly
     SUBDIR += grok-cli
     SUBDIR += gwhich
     SUBDIR += hashdb
