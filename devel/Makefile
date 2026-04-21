@@ -4600,6 +4600,7 @@
     SUBDIR += py-azure-multiapi-storage
     SUBDIR += py-azure-storage-blob
     SUBDIR += py-azure-storage-common
+    SUBDIR += py-azure-storage-file-datalake
     SUBDIR += py-azure-storage-file-share
     SUBDIR += py-azure-storage-queue
     SUBDIR += py-azure-synapse-accesscontrol
