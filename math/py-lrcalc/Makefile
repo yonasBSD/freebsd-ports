@@ -1,6 +1,6 @@
 PORTNAME=	lrcalc
 PORTVERSION=	2.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,12 +16,12 @@ LIB_DEPENDS=	liblrcalc.so:math/lrcalc
 
 USES=		localbase python
 
-USE_PYTHON=	cython distutils
+USE_PYTHON=	cython pep517
 
 .if !defined(WITH_DEBUG)
 LDFLAGS+=	-s
 .endif
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/lrcalc%%PYTHON_TAG%%.so
+PLIST_SUB=	VER=${PORTVERSION}
 
 .include <bsd.port.mk>
