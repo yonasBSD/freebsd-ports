@@ -363,6 +363,11 @@ gecko-post-patch:
 # Disable vendor checksums like lang/rust
 	@${REINPLACE_CMD} 's,"files":{[^}]*},"files":{},' \
 		${MOZSRC}/third_party/rust/*/.cargo-checksum.json
+# Thunderbird has rust crates in the comm dir
+	@if [ -d ${MOZSRC}/comm/third_party/rust ] ; then \
+		${REINPLACE_CMD} 's,"files":{[^}]*},"files":{},' \
+			${MOZSRC}/comm/third_party/rust/*/.cargo-checksum.json; \
+	fi
 
 pre-configure-script:
 # Check that the running kernel has COMPAT_FREEBSD11 required by lang/rust post-ino64
