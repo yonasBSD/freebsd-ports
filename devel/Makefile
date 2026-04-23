@@ -7024,6 +7024,7 @@
     SUBDIR += rubygem-aws-sdk-s3
     SUBDIR += rubygem-aws-sdk-s3-gitlab
     SUBDIR += rubygem-aws-sdk-s3control
+    SUBDIR += rubygem-aws-sdk-s3files
     SUBDIR += rubygem-aws-sdk-s3outposts
     SUBDIR += rubygem-aws-sdk-s3tables
     SUBDIR += rubygem-aws-sdk-s3vectors
