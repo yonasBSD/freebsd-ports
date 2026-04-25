@@ -1082,7 +1082,6 @@
     SUBDIR += py-howdoi
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
-    SUBDIR += py-ioztat
     SUBDIR += py-jailconf
     SUBDIR += py-keep
     SUBDIR += py-kubernetes
