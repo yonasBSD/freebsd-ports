@@ -38,6 +38,7 @@ PLIST_SUB=	VERSION="${DISTVERSION}"
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/mz_compat.h \
+		${WRKSRC}/mz_config.h \
 		${STAGEDIR}${PREFIX}/include/minizip-ng/
 
 .include <bsd.port.mk>
