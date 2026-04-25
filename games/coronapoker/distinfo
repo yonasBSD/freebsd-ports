@@ -1,5 +1,5 @@
-TIMESTAMP = 1599346728
-SHA256 (coronapoker-4.33-deps.tar.gz) = 9636254e547a0f3c943cb5e91f7d2d4d018b5b747c4fb2ff4784891b93a88984
-SIZE (coronapoker-4.33-deps.tar.gz) = 192925093
-SHA256 (tonikelope-coronapoker-v4.33_GH0.tar.gz) = 157a51d430e00f63345f72083bc706b8bc04f670169bcb29ed12bb0eeec3205e
-SIZE (tonikelope-coronapoker-v4.33_GH0.tar.gz) = 92254916
+TIMESTAMP = 1777020355
+SHA256 (coronapoker-20.28-deps.tar.gz) = 949de6838af398109813d5ce7f9e6b86a18a4b2355aa810d20eeb1ddaa738ca0
+SIZE (coronapoker-20.28-deps.tar.gz) = 30402541
+SHA256 (tonikelope-coronapoker-v20.28_GH0.tar.gz) = 9f527058639abb3f342b34abcd068418a2d85f017bc4e90a841457e1b9434d0b
+SIZE (tonikelope-coronapoker-v20.28_GH0.tar.gz) = 312524801

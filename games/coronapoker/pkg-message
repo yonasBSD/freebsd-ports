@@ -1,0 +1,54 @@
+[
+{ type: install
+  message: <<EOM
+You installed coronapoker: Poker game implemented in Java.
+
+================================================================
+
+  GPL COMPLIANCE AND SECURITY NOTICE
+  
+  This port has been patched for GPL compliance and security.
+
+  ISSUE: Binary Downloads Disabled
+  ================================
+  CoronaPoker includes Panoptes, a closed-source cryptographic
+  anti-cheat engine, which this port previously attempted to:
+  
+    • Download at runtime from GitHub (untrusted binary source)
+    • Cache locally to ~/.coronapoker/Panoptes/
+    • Load via JNI as native code
+
+  This violates the GPLv3 license under which CoronaPoker is
+  licensed, as it requires source code availability.
+
+  APPLIED FIX
+  ===========
+  This port has been patched to:
+  
+    • DISABLE remote binary downloads
+    • PREVENT native library loading on all platforms
+    • RUN in pure-Java mode without cryptographic anti-cheat
+
+  FUNCTIONAL LIMITATIONS
+  ======================
+  Without the Panoptes engine, the game will:
+  
+    • Have NO tamper detection
+    • Have NO action blockchain verification
+    • Have NO post-game auditing capabilities
+    • Rely solely on Java-level game logic enforcement
+
+  SECURITY IMPLICATIONS
+  ======================
+  • No untrusted binaries will be downloaded
+  • No closed-source libraries will be executed
+  • Game integrity depends on player honesty
+  • Suitable for casual/trusted gameplay only
+
+  For more information about this issue:
+  https://github.com/tonikelope/coronapoker/issues/7
+
+================================================================
+EOM
+}
+]

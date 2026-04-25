@@ -1,12 +1,12 @@
 PORTNAME=	coronapoker
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.33
-PORTREVISION=	2
+DISTVERSION=	20.28
 CATEGORIES=	games java
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Texas Holdem poker game
-WWW=		https://tonikelope.github.io/coronapoker/
+WWW=		https://tonikelope.github.io/coronapoker/ \
+		https://github.com/tonikelope/coronapoker
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -36,9 +36,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 DEV_UPDATE_MODE=	no
 
 .if (${DEV_UPDATE_MODE} == "yes")
-post-build:
-	@cd ${WRKDIR} && ${TAR} czf ${DISTDIR}/${PORTNAME}-${DISTVERSION}-deps${EXTRACT_SUFX} .m2
-	@${ECHO} "(!!!) Please upload the deps archive: ${DISTDIR}/${PORTNAME}-${DISTVERSION}-deps${EXTRACT_SUFX}"
+MVN_ARGS=
 .else
 MASTER_SITES+=	LOCAL/yuri/:deps
 DISTFILES+=	${PORTNAME}-${DISTVERSION}-deps${EXTRACT_SUFX}:deps
@@ -55,6 +53,12 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/target/CoronaPoker-FINAL-*-jar-with-dependencies.jar ${STAGEDIR}${JAVAJARDIR}/${PORTNAME}-${PORTVERSION}-jar-with-dependencies.jar
+	${INSTALL_DATA} ${WRKSRC}/target/CoronaPoker-*-jar-with-dependencies.jar ${STAGEDIR}${JAVAJARDIR}/${PORTNAME}-${PORTVERSION}-jar-with-dependencies.jar
+
+.if (${DEV_UPDATE_MODE} == "yes")
+post-build:
+	@cd ${WRKDIR} && ${TAR} czf ${DISTDIR}/${PORTNAME}-${DISTVERSION}-deps${EXTRACT_SUFX} .m2
+	@${ECHO} "(!!!) Please upload the deps archive: ${DISTDIR}/${PORTNAME}-${DISTVERSION}-deps${EXTRACT_SUFX}"
+.endif
 
 .include <bsd.port.mk>
