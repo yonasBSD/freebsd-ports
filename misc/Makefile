@@ -775,6 +775,7 @@
     SUBDIR += viz
     SUBDIR += vote
     SUBDIR += vxl
+    SUBDIR += wacli
     SUBDIR += wavedrom
     SUBDIR += wego
     SUBDIR += whichman
