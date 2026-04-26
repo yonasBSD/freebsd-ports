@@ -712,6 +712,7 @@
     SUBDIR += snakemake
     SUBDIR += soapysdr
     SUBDIR += solarized
+    SUBDIR += sonoscli
     SUBDIR += spacenavd-devel
     SUBDIR += spnavcfg-devel
     SUBDIR += sshbuddy
