@@ -6046,6 +6046,7 @@
     SUBDIR += py-scikit-build-core
     SUBDIR += py-scooby
     SUBDIR += py-scripttest
+    SUBDIR += py-scverse-misc
     SUBDIR += py-seedir
     SUBDIR += py-selection
     SUBDIR += py-semantic-version
