@@ -1956,6 +1956,7 @@
     SUBDIR += p5-App-SD
     SUBDIR += p5-App-SVN-Bisect
     SUBDIR += p5-App-Trace
+    SUBDIR += p5-App-Yath-Script
     SUBDIR += p5-App-cpanminus
     SUBDIR += p5-App-cpanminus-reporter
     SUBDIR += p5-App-cpanoutdated
