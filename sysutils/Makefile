@@ -1060,6 +1060,7 @@
     SUBDIR += py-croniter2
     SUBDIR += py-dbuild
     SUBDIR += py-debian-inspector
+    SUBDIR += py-dex
     SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
     SUBDIR += py-director
