@@ -812,6 +812,7 @@
     SUBDIR += nvimpager
     SUBDIR += nvme-cli
     SUBDIR += nvramtool
+    SUBDIR += nvtop
     SUBDIR += oak
     SUBDIR += obliterate
     SUBDIR += oc
