@@ -6158,6 +6158,7 @@
     SUBDIR += py-taskflow
     SUBDIR += py-taskgroup
     SUBDIR += py-tasklib
+    SUBDIR += py-tatsu
     SUBDIR += py-tblib
     SUBDIR += py-tdworkflow
     SUBDIR += py-telepath
