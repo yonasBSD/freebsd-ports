@@ -10,6 +10,9 @@ MAINTAINER=	lapo@lapo.it
 COMMENT=	Java JDBC driver for SQLite
 WWW=		http://web.archive.org/web/20120721075310/http://www.zentus.com/sqlitejdbc/
 
+DEPRECATED=	Dead old upstream, replaced by databases/sqlite-jdbc
+EXPIRATION_DATE=	2026-07-01
+
 LIB_DEPENDS=	libsqlite3.so:databases/sqlite3
 
 USES=		gmake java tar:tgz
