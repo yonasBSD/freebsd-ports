@@ -168,7 +168,7 @@
   </vuln>
 
   <vuln vid="9eb2533e-4434-11f1-bb07-bc241121aa0a">
-    <topic>FreeBSD -- Remote code execution via malicious DHCP options </topic>
+    <topic>FreeBSD -- Remote code execution via malicious DHCP options</topic>
     <affects>
       <package>
 	<name>FreeBSD</name>
