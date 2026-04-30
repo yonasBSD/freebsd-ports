@@ -1,9 +1,9 @@
 PORTNAME=	vulkan-utility-libraries
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.336
+DISTVERSION=	1.4.349
 CATEGORIES=	graphics
 
-MAINTAINER=	kde@FreeBSD.org
+MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Utility libraries for Vulkan developers
 WWW=		https://github.com/KhronosGroup/Vulkan-Utility-Libraries
 
