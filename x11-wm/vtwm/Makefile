@@ -22,12 +22,6 @@ PLIST_FILES=	bin/vtwm \
 		etc/system.vtwmrc \
 		share/man/man1/vtwm.1.gz
 
-OPTIONS_DEFINE=	SOUND
-SOUND_DESC=	Sound support (via rplay)
-
-SOUND_CONFIGURE_ENABLE=	sound
-SOUND_LIB_DEPENDS=	librplay.so:audio/rplay
-
 pre-patch:
 	@${REINPLACE_CMD} -e 's|\$${datadir}/X11/vtwm|\$${prefix}/etc|' ${WRKSRC}/Makefile.in
 
