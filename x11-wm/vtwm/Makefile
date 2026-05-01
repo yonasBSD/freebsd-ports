@@ -15,7 +15,6 @@ LIB_DEPENDS=	libpng.so:graphics/png
 USES=	pkgconfig xorg
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 USE_XORG=	x11 xext xft xinerama xpm xmu xrandr
 
 PLIST_FILES=	bin/vtwm \
