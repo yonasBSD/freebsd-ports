@@ -211,6 +211,7 @@
     SUBDIR += forgejo
     SUBDIR += forgejo-lts
     SUBDIR += forgejo11
+    SUBDIR += forgejo14
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
