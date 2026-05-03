@@ -75,15 +75,15 @@ PLIST_SUB+=	ETCFILES="${CONFIG_FILES}" \
 		LIBVER_LONG=${LIBVER_LONG}
 PORTDOCS=	CONTRIBUTORS HACKING INSTALL LICENSE MANIFEST NEWS README TODO
 
-OPTIONS_DEFINE=		BERKELEYDB BLACKLISTD DOCS EXAMPLES GNUPG KERBEROS \
+OPTIONS_DEFINE=		BERKELEYDB BLOCKLISTD DOCS EXAMPLES GNUPG KERBEROS \
 			KEYWORDS LARGE_FILES OPENSSL PYTHON SASL SETGID_INEWS \
 			SQLITE TAGGED_HASH UUCP_RNEWS
-OPTIONS_DEFAULT=	BERKELEYDB BLACKLISTD GNUPG KEYWORDS LARGE_FILES \
+OPTIONS_DEFAULT=	BERKELEYDB BLOCKLISTD GNUPG KEYWORDS LARGE_FILES \
 			OPENSSL PYTHON SETGID_INEWS SQLITE UUCP_RNEWS
 OPTIONS_SUB=		yes
 
 BERKELEYDB_DESC=	Enable BerkeleyDB (for ovdb overview method)
-BLACKLISTD_DESC=	Enable blacklistd support
+BLOCKLISTD_DESC=	Enable blocklistd support
 GNUPG_DESC=		GnuPG support (for pgpverify control message)
 KERBEROS_DESC=		Enable Kerberos v5 (for auth_krb5)
 KEYWORDS_DESC=		Automatic keyword generation support
@@ -101,7 +101,11 @@ BERKELEYDB_CONFIGURE_ON=	--with-bdb-include=${BDB_INCLUDE_DIR} \
 				--with-bdb-lib=${LOCALBASE}/lib \
 				--with-bdb=${LOCALBASE}
 
-BLACKLISTD_CONFIGURE_WITH=	blacklist
+.if ${BRANCH:U} == 2.8 && ${OSVERSION} >= 1500000
+BLOCKLISTD_CONFIGURE_WITH=	blocklist
+.else
+BLOCKLISTD_CONFIGURE_WITH=	blacklist
+.endif
 
 # Although pgpverify needs gpgv/gpgv2,
 # checking 'gpg' is the shortest way to check any version of GnuPG installed.
@@ -157,6 +161,23 @@ post-patch:
 	                  ${WRKSRC}/site/Makefile
 .if ${PORT_OPTIONS:MBERKELEYDB}
 	@${REINPLACE_CMD} -e 's!-ldb!-ldb-${BDB_VER}!' ${WRKSRC}/configure
+.endif
+.if ${BRANCH:U} == 2.8 && ${OSVERSION} < 1500000 && ${PORT_OPTIONS:MBLOCKLISTD}
+	@${REINPLACE_CMD} -e 's|blocklist\.h|blacklist.h|g' \
+		-e 's|libblocklist|libblacklist|g' \
+		-e 's|-lblocklist|-lblacklist|g' \
+		-e 's|blocklist_open|blacklist_open|g' \
+		-e 's|blocklist_close|blacklist_close|g' \
+		-e 's|blocklist_r|blacklist_r|g' \
+		-e 's|BLOCKLIST_AUTH|BLACKLIST_AUTH|g' \
+		-e 's|struct blocklist|struct blacklist|g' \
+		-e 's|HAVE_BLOCKLIST|HAVE_BLACKLIST|g' \
+		${WRKSRC}/nnrpd/perm.c \
+		${WRKSRC}/include/config.h.in
+	@${REINPLACE_CMD} -e 's|blocklist|blacklist|g' \
+		-e 's|BLOCKLIST|BLACKLIST|g' \
+		${WRKSRC}/m4/blocklist.m4 \
+		${WRKSRC}/configure
 .endif
 
 pre-install:
