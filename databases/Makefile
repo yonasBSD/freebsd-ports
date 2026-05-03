@@ -1110,6 +1110,7 @@
     SUBDIR += sqlite-ext-pcre
     SUBDIR += sqlite-ext-regexp
     SUBDIR += sqlite-ext-spellfix
+    SUBDIR += sqlite-ext-vec
     SUBDIR += sqlite-jdbc
     SUBDIR += sqlite2
     SUBDIR += sqlite3
