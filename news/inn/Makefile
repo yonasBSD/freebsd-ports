@@ -162,23 +162,20 @@ post-patch:
 .if ${PORT_OPTIONS:MBERKELEYDB}
 	@${REINPLACE_CMD} -e 's!-ldb!-ldb-${BDB_VER}!' ${WRKSRC}/configure
 .endif
-.if ${BRANCH:U} == 2.8 && ${OSVERSION} < 1500000 && ${PORT_OPTIONS:MBLOCKLISTD}
-	@${REINPLACE_CMD} -e 's|blocklist\.h|blacklist.h|g' \
-		-e 's|libblocklist|libblacklist|g' \
-		-e 's|-lblocklist|-lblacklist|g' \
-		-e 's|blocklist_open|blacklist_open|g' \
-		-e 's|blocklist_close|blacklist_close|g' \
-		-e 's|blocklist_r|blacklist_r|g' \
-		-e 's|BLOCKLIST_AUTH|BLACKLIST_AUTH|g' \
-		-e 's|struct blocklist|struct blacklist|g' \
-		-e 's|HAVE_BLOCKLIST|HAVE_BLACKLIST|g' \
-		${WRKSRC}/nnrpd/perm.c \
-		${WRKSRC}/include/config.h.in
-	@${REINPLACE_CMD} -e 's|blocklist|blacklist|g' \
-		-e 's|BLOCKLIST|BLACKLIST|g' \
-		${WRKSRC}/m4/blocklist.m4 \
-		${WRKSRC}/Makefile.global.in \
-		${WRKSRC}/configure
+.if ${BRANCH:U} == 2.8
+.  if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
+	@${FIND} ${WRKSRC} -type f -exec ${SED} -i '' \
+		-e 's/BLOCKLIST/BLACKLIST/g' \
+		-e 's/Blocklist/Blacklist/g' \
+		-e 's/blocklist/blacklist/g' {} +
+.  endif
+.else
+.  if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1500000
+	@${FIND} ${WRKSRC} -type f -exec ${SED} -i '' \
+		-e 's/BLACKLIST/BLOCKLIST/g' \
+		-e 's/Blacklist/Blocklist/g' \
+		-e 's/blacklist/blocklist/g' {} +
+.  endif
 .endif
 
 pre-install:
