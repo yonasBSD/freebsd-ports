@@ -177,6 +177,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|blocklist|blacklist|g' \
 		-e 's|BLOCKLIST|BLACKLIST|g' \
 		${WRKSRC}/m4/blocklist.m4 \
+		${WRKSRC}/Makefile.global.in \
 		${WRKSRC}/configure
 .endif
 
