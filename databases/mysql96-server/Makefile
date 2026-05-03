@@ -12,7 +12,7 @@ WWW=		https://www.mysql.com/
 LICENSE=		GPLv2
 
 DEPRECATED=	EOLed upstream, switch to newer version
-EXPIRATION_DATE=2026-04-31
+EXPIRATION_DATE=2026-06-30
 
 # MySQL8.2+ supports only 64-bit platforms
 # Review list after 13.x EoL
