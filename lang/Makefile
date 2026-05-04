@@ -60,7 +60,6 @@
     SUBDIR += elixir-devel
     SUBDIR += elixir-mode.el
     SUBDIR += elk
-    SUBDIR += elm
     SUBDIR += emacs-lisp-intro
     SUBDIR += emilua
     SUBDIR += erlang
