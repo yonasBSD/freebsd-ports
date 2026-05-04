@@ -5269,3 +5269,4 @@ ports-mgmt/portsnap||2026-05-04|Has expired: portsnap infrastructure will be rem
 lang/ruby32||2026-05-04|Has expired: Please migrate to newer version. Ruby 3.2 is expected to reach its EoL on March 31, 2026
 lang/ghc92||2026-05-04|Has expired: Old version
 math/xgraph||2026-05-04|Has expired: Obsolete software, unmaintained upstream
+dns/samba-nsupdate||2026-05-04|Has expired: dns/samba-nsupdate has been abandoned for many years; use dns/bind-tools for DNS updates with GSS-TSIG
