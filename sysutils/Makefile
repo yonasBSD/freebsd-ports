@@ -185,7 +185,6 @@
     SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine-masterfiles-lts
     SUBDIR += cfengine-masterfiles321
-    SUBDIR += cfengine-masterfiles322
     SUBDIR += cfengine-masterfiles323
     SUBDIR += cfengine-masterfiles324
     SUBDIR += cfengine-masterfiles325
