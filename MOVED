@@ -5272,3 +5272,4 @@ math/xgraph||2026-05-04|Has expired: Obsolete software, unmaintained upstream
 dns/samba-nsupdate||2026-05-04|Has expired: dns/samba-nsupdate has been abandoned for many years; use dns/bind-tools for DNS updates with GSS-TSIG
 astro/mymoon||2026-05-04|Has expired: mastersite disappeared
 games/flightgear-mb339-pan||2026-05-04|Has expired: Upstream is inactive for 15+ years
+x11/urxvt-perls||2026-05-04|Has expired: Upstream repository archived in 2021
