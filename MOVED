@@ -5270,3 +5270,4 @@ lang/ruby32||2026-05-04|Has expired: Please migrate to newer version. Ruby 3.2 i
 lang/ghc92||2026-05-04|Has expired: Old version
 math/xgraph||2026-05-04|Has expired: Obsolete software, unmaintained upstream
 dns/samba-nsupdate||2026-05-04|Has expired: dns/samba-nsupdate has been abandoned for many years; use dns/bind-tools for DNS updates with GSS-TSIG
+astro/mymoon||2026-05-04|Has expired: mastersite disappeared
