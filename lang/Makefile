@@ -106,7 +106,6 @@
     SUBDIR += gcc6-aux
     SUBDIR += gforth
     SUBDIR += ghc
-    SUBDIR += ghc92
     SUBDIR += ghc94
     SUBDIR += ghc96
     SUBDIR += ghc98

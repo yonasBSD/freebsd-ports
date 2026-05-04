@@ -5267,3 +5267,4 @@ databases/kuzu|databases/ladybug|2026-05-03|Upstream abandoned, project continui
 lang/elm||2026-05-04|Has expired: Depends on a deprecated compiler's version
 ports-mgmt/portsnap||2026-05-04|Has expired: portsnap infrastructure will be removed after the EOL of 13.x
 lang/ruby32||2026-05-04|Has expired: Please migrate to newer version. Ruby 3.2 is expected to reach its EoL on March 31, 2026
+lang/ghc92||2026-05-04|Has expired: Old version
