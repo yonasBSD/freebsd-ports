@@ -150,7 +150,7 @@ post-patch:
 		${WRKSRC}/freebsd/cc_toolchain_config.bzl \
 		${WRKSRC}/.bazelrc \
 		${WRKSRC}/WORKSPACE
-	@${REINPLACE_CMD} -e "s#%%NUMPY_INCLUDEDIR%%#${PYTHON_SITELIBDIR}/numpy/core/include#g" \
+	@${REINPLACE_CMD} -e "s#%%NUMPY_INCLUDEDIR%%#${PYTHON_SITELIBDIR}/numpy/_core/include#g" \
 		${WRKDIR}/bazelrc \
 		${WRKSRC}/freebsd/cc_toolchain_config.bzl
 
@@ -194,11 +194,11 @@ post-patch:
 	# numpy needs extra cc_library for numpy_headers used by C++ deps
 	@${MKDIR} ${WRKSRC}/bazel_pypi_hub/numpy
 	@${MKDIR} ${WRKSRC}/bazel_pypi_hub/numpy/include
-	@${LN} -sf ${PYTHON_SITELIBDIR}/numpy/core/include/numpy \
+	@${LN} -sf ${PYTHON_SITELIBDIR}/numpy/_core/include/numpy \
 		${WRKSRC}/bazel_pypi_hub/numpy/include/numpy
 	# build_pip_package.py expects site-packages/numpy/{_core,core}/include
 	@${MKDIR} ${WRKSRC}/bazel_pypi_hub/numpy/site-packages/numpy/core
-	@${LN} -sf ${PYTHON_SITELIBDIR}/numpy/core/include \
+	@${LN} -sf ${PYTHON_SITELIBDIR}/numpy/_core/include \
 		${WRKSRC}/bazel_pypi_hub/numpy/site-packages/numpy/core/include
 	@${PRINTF} 'package(default_visibility = ["//visibility:public"])\npy_library(name = "pkg", srcs = [])\npy_library(name = "lib", srcs = [])\nalias(name = "numpy", actual = ":pkg")\ncc_library(\n    name = "numpy_headers",\n    hdrs = glob(["include/**/*.h"]),\n    includes = ["include"],\n)\n' \
 		> ${WRKSRC}/bazel_pypi_hub/numpy/BUILD.bazel
