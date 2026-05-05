@@ -4965,6 +4965,7 @@
     SUBDIR += py-fastf1
     SUBDIR += py-fastimport
     SUBDIR += py-fastjsonschema
+    SUBDIR += py-fastlite
     SUBDIR += py-fastnumbers
     SUBDIR += py-fastprogress
     SUBDIR += py-fastuuid
