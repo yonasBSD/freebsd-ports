@@ -8469,6 +8469,7 @@
     SUBDIR += sedsed
     SUBDIR += seer-gdb
     SUBDIR += selene
+    SUBDIR += sem
     SUBDIR += semver
     SUBDIR += sentry-cli
     SUBDIR += serd
