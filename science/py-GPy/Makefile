@@ -8,6 +8,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Gaussian process toolbox
 WWW=		https://sheffieldml.github.io/GPy/ \
+
+BROKEN=		fails to build with NumPy 2.x
 		https://github.com/SheffieldML/GPy
 
 LICENSE=	BSD3CLAUSE

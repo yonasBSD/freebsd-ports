@@ -9,6 +9,8 @@ MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python interface to CLP, CBC, and CGL to solve LPs and MIPs
 WWW=		https://github.com/coin-or/CyLP
 
+BROKEN=		fails to build with NumPy 2.x
+
 LICENSE=	CPL10
 LICENSE_NAME=	Common Public License Version 1.0
 LICENSE_FILE=	${WRKSRC}/LICENSE

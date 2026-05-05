@@ -11,6 +11,8 @@ MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python wrapper for TA-Lib (Technical Analysis Library)
 WWW=		https://ta-lib.github.io/ta-lib-python/
 
+BROKEN=		fails to build with NumPy 2.x
+
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 

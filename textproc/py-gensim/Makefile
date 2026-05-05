@@ -9,6 +9,8 @@ MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python framework for fast Vector Space Modelling
 WWW=		https://radimrehurek.com/gensim/
 
+BROKEN=		fails to build with NumPy 2.x
+
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 

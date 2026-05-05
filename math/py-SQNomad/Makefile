@@ -9,6 +9,8 @@ MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Blackbox optimization software
 WWW=		https://www.gerad.ca/nomad/
 
+BROKEN=		fails to build with NumPy 2.x
+
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 

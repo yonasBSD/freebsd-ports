@@ -7,6 +7,8 @@ CATEGORIES=	science # physics
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Salome Project: Multi-physics simulations: Kernel
 WWW=		https://www.salome-platform.org/ \
+
+BROKEN=		fails to build with NumPy 2.x
 		https://github.com/SalomePlatform/kernel/
 
 LICENSE=	LGPL21+
