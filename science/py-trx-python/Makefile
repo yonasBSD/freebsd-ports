@@ -1,5 +1,6 @@
 PORTNAME=	trx-python # this project is planned to be merged into DIPY (science/py-dipy)
 DISTVERSION=	0.3
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}

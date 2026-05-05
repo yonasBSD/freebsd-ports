@@ -2,6 +2,7 @@
 
 PORTNAME=	levmar
 DISTVERSION=	0.3.0.dev0+git # version is hardcoded in the project
+PORTREVISION=	1
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 

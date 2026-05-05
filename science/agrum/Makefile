@@ -1,5 +1,6 @@
 PORTNAME=	agrum
 DISTVERSION=	2.3.2
+PORTREVISION=	1
 CATEGORIES=	science math
 
 MAINTAINER=	yuri@FreeBSD.org

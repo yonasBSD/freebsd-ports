@@ -1,5 +1,6 @@
 PORTNAME=	smoldyn
 DISTVERSION=	2.75
+PORTREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	https://www.smoldyn.org/
 

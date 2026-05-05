@@ -1,5 +1,6 @@
 PORTNAME=	moodbar
 PORTVERSION=	1.3.0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/exaile/${PORTNAME}/releases/download/v${PORTVERSION}/
 

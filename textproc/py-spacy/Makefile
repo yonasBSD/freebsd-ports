@@ -1,5 +1,6 @@
 PORTNAME=	spacy
 PORTVERSION=	3.8.13
+PORTREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI \
 		https://github.com/explosion/spaCy/releases/download/release-v${PORTVERSION}/

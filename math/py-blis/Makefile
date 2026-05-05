@@ -1,6 +1,6 @@
 PORTNAME=	blis
 PORTVERSION=	1.3.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	PYPI \
 		https://github.com/explosion/cython-blis/releases/download/release-v${PORTVERSION}/

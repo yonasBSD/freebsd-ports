@@ -1,6 +1,6 @@
 PORTNAME=	dwave-cloud-client
 DISTVERSION=	0.14.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science python www # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
