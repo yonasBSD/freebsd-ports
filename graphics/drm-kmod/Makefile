@@ -22,8 +22,6 @@ _DRM_ARCHS=	amd64
 .  else
 RUN_DEPENDS+=	${KMODDIR}/drm.ko:graphics/drm-61-kmod
 _DRM_ARCHS=	amd64 powerpc64 powerpc64le
-.  else
-_DRM_ARCHS=
 .  endif
 .  if ! ${_DRM_ARCHS:M${ARCH}}
 IGNORE=		not supported for this configuration
